@@ -20,11 +20,8 @@
                 Welcome Admin !
             </h1>
             <p id="customer" style="max-width:800px">
-                From here you can manage all of core Internet Banking settings.
-                You can add/manage customers, view their transactions, edit their
-                details and even delete them. You can also post news on the website.
-                <br>Please keep in mind that with big power comes big responsibility.
-                Therefore please do not misuse your admin control to create trouble.
+                Từ đây bạn có thể quản lý tất cả các cài đặt Internet Banking cốt lõi.  Bạn có thể thêm / quản lý khách hàng, xem giao dịch của họ, chỉnh sửa chi tiết của họ và thậm chí xóa họ.  Bạn cũng có thể đăng tin tức trên trang web. 
+                <br> Hãy nhớ rằng với sức mạnh lớn đi kèm trách nhiệm lớn.  Do đó, vui lòng không sử dụng sai quyền kiểm soát quản trị viên của bạn để tạo rắc rối.
             </p>
         </div>
     </div>

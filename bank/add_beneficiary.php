@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    <form class="add_customer_form" action="add_beneficiary_action.php" method="post">
+    <form class="add_customer_form" action="./add_beneficiary_action.php" method="post">
         <div class="flex-container-form_header">
             <h1 id="form_header">Please fill in beneficiary details...</h1>
         </div>

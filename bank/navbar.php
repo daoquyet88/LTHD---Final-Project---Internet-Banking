@@ -13,6 +13,7 @@
         <a href="./news.php">NEWS</a>
         <a href="./contact.php">CONTACT</a>
         <a href="#about">ABOUT US</a>
+        <a href="./admin_login.php">TRANG QUẢN TRỊ</a>
         <a href="javascript:void(0);" class="icon" onclick="respFunc()">&#9776;</a>
     </div>
     </div>

@@ -59,7 +59,7 @@
 
         <div class="flex-container">
             <div class=container>
-                <label>Aadhar No :</label><br>
+                <label>ID/Passport :</label><br>
                 <input name="aadhar" size="25" type="text" required />
             </div>
         </div>
@@ -84,15 +84,10 @@
 
         <div class="flex-container">
             <div class=container>
-                <label>Bank Branch :</label>
+                <label>City :</label>
             </div>
             <div  class=container>
                 <select name="branch">
-                    <option value="delhi">Delhi</option>
-                    <option value="newyork">New York</option>
-                    <option value="paris">Paris</option>
-                    <option value="riyadh">Riyadh</option>
-                    <option value="moscow">Moscow</option>
                 </select>
             </div>
         </div>

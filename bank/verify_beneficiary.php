@@ -11,7 +11,7 @@
 
     if (isset($_SESSION['auto_delete_benef'])) {
         if ($_SESSION['auto_delete_benef'] === true) {
-            header("location:/auto_delete_beneficiary.php");
+            header("location:./auto_delete_beneficiary.php");
         }
     }
 
