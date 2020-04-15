@@ -18,7 +18,7 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="user_navbar_style.css">
+    <link rel="stylesheet" href="css/user_navbar_style.css">
     <script src="jquery-3.2.1.min.js"></script>
 </head>
 
