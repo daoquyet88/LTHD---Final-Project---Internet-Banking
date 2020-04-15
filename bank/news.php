@@ -29,7 +29,7 @@
                         <h1 id="title"><?php echo $row["title"] . "<br>"; ?></h1>
                     </div>
                     <div class="flex-container-title">
-                        <p id="date"><?php echo "Date : " .
+                        <p id="date"><?php echo "Ngày : " .
                             date("d/m/Y", strtotime($row["created"])); ?></p>
                     </div>
                     <div class="flex-container-body">

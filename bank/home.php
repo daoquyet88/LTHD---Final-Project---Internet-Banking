@@ -27,27 +27,25 @@
             <div class="flex-item-1">
                 <form action="customer_login_action.php" method="post">
                     <div class="flex-item-login" style="text-align: center;">
-                        <h2>Welcome</h2>
+                        <h2>Chào mừng khách hàng</h2>
                     </div>
 
                     <div class="flex-item">
-                        <input type="text" name="cust_uname" placeholder="Enter your Username" required>
+                        <input type="text" name="cust_uname" placeholder=" Tài khoản" required>
                     </div>
 
                     <div class="flex-item">
-                        <input type="password" name="cust_psw" placeholder="Enter your Password" required>
+                        <input type="password" name="cust_psw" placeholder=" Mật khẩu" required>
                     </div>
 
                     <div class="flex-item" style="display: flex;
                                                 justify-content: center;"  >
-                        <button type="submit">Login</button>
+                        <button type="submit">Đăng nhập</button>
                     </div>
                 </form>
             </div>
         </div>
-
     </div>
-
 </body>
 </html>
 

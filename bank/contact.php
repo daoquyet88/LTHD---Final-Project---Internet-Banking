@@ -13,27 +13,26 @@
 <body>
     <div class="flex-container-background">
         <div class="flex-container-heading">
-            <h1 id="contact">Contact Us</h1>
+            <h1 id="contact">Thông tin liên hệ</h1>
         </div>
 
         <div class="flex-container" style="border-bottom: 0;
                                            border-top-left-radius: 10px;
                                            border-top-right-radius: 10px;">
             <div class="flex-item">
-                <h1 id="sub-contact">Corporate Headquarters</h1>
+                <h1 id="sub-contact">* Trụ sở chính</h1>
                 <p id="sub-contact">
-                    Corporate HQ<br>Dolphin Bank<br>
-                    1985 Cedar Bridge Ave, Suite 3<br>
-                    Lakewood, NY 08701
+                    Tập đoàn LQV<br>
+                    Ngân hàng LQV<br>
+                    007 Cộng Hòa, Quận 1, TP. Hồ Chí Minh
                 </p>
             </div>
             <div class="flex-item">
-                <h1 id="sub-contact">General Contact</h1>
+                <h1 id="sub-contact">* Liên hệ chung</h1>
                 <p id="sub-contact">
-                    Toll-Free: 888-968-6822<br>
-                    Phone: 732-367-5505<br>
-                    Fax: 732-367-2313<br>
-                    Email: office@&#8203dolphinbank.com
+                    Điện thoại: 099 9999999<br>
+                    Fax: 012 3456789<br>
+                    Email: office@LQVbank.org
                 </p>
             </div>
         </div>
@@ -42,21 +41,13 @@
                                            border-bottom-left-radius: 10px;
                                            border-bottom-right-radius: 10px;">
             <div class="flex-item">
-                <h1 id="sub-contact">Customer Care (24x7)</h1>
+                <h1 id="sub-contact">* Chăm sóc khách hàng 24/7</h1>
                 <p id="sub-contact">
-                    Toll-Free: 888-966-6992<br>
-                    Phone: 732-666-5555<br>
-                    Email: care@&#8203dolphinbank.com
+                    Điện thoại: 098 8888888<br>
+                    Email: care@LQVbank.org
                 </p>
             </div>
             <div class="flex-item">
-                <h1 id="sub-contact">Live Chat</h1>
-                <p id="sub-contact">
-                    Download our app and live chat<br>
-                    with our customer care !<br>
-                    App available on Google Play<br>
-                    and iPhone-AppStore.
-                </p>
             </div>
         </div>
     </div>

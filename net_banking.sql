@@ -152,7 +152,7 @@ INSERT INTO `customer` (`cust_id`, `first_name`, `last_name`, `gender`, `dob`, `
 
 CREATE TABLE `news` (
   `id` int(10) UNSIGNED NOT NULL,
-  `title` varchar(40) DEFAULT NULL,
+  `title` nvarchar(40) DEFAULT NULL,
   `created` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -161,10 +161,17 @@ CREATE TABLE `news` (
 --
 
 INSERT INTO `news` (`id`, `title`, `created`) VALUES
-(1, 'Hello World !', '2017-09-06 15:45:25'),
-(2, 'The First News !', '2017-09-06 15:45:55'),
-(3, 'Increasing Interest Rates !', '2017-09-06 15:46:21'),
-(4, 'GST on banking', '2017-11-19 16:39:35');
+(1, N'Ưu đãi', '2020-03-15 15:45:25'),
+(2, N'Tài chính tiêu dùng', '2020-03-19 08:32:25'),
+(3, N'Tài chính thế giới', '2020-03-25 08:32:25'),
+(4, N'Chung tay chống dịch', '2020-04-01 09:45:55'),
+(5, N'Thông báo nghỉ lễ', '2020-04-01 10:45:55'),
+(6, N'Tài chính ngân hàng', '2020-04-06 11:46:21'),
+(7, N'Chung tay chống dịch', '2020-04-08 09:45:55'),
+(8, N'Giải pháp tài chính an toàn', '2020-04-09 16:39:35'),
+(9, N'Tài chính tiêu dùng', '2020-04-15 16:39:35'),
+(10, N'Tài chính kinh doanh', '2020-04-19 16:39:35'),
+(11, N'Thông báo nghỉ lễ', '2020-04-29 16:39:35');
 
 -- --------------------------------------------------------
 
@@ -174,7 +181,7 @@ INSERT INTO `news` (`id`, `title`, `created`) VALUES
 
 CREATE TABLE `news_body` (
   `id` int(10) UNSIGNED NOT NULL,
-  `body` text DEFAULT NULL
+  `body` nvarchar(500) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -182,10 +189,17 @@ CREATE TABLE `news_body` (
 --
 
 INSERT INTO `news_body` (`id`, `body`) VALUES
-(1, '\"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\"'),
-(2, 'What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Why do we use it? It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using \'Content here, content here\', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for \'lorem ipsum\' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like). Where does it come from? Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of \"de Finibus Bonorum et Malorum\" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, \"Lorem ipsum dolor sit amet..\", comes from a line in section 1.10.32. The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from \"de Finibus Bonorum et Malorum\" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham. Where can I get some? There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don\'t look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn\'t anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.'),
-(3, 'This is to inform that as of today interest rates will increase by 4.6% on loans and decrease by 5.8% on deposits. Effective immediately. '),
-(4, 'This is to inform that GST shall be applied on all usages of :\r\n1. Credit Cards\r\n2. Debit Cards\r\n3. Internet Banking\r\nat a nominal (nationally applied) rate of 18%.\r\n');
+(1, N'Từ ngày 30/04/2020, Ngân hàng LQV miễn phí chuyển tiền đến tất cả ngân hàng trong nước với Internet Banking cùng nhiều ưu đãi hấp dẫn khác.'),
+(2, N'Điều chỉnh tỉ giá ngoại tệ.'),
+(3, N'Ngân hàng LQV giảm lãi xuất cho vay quý 2.'),
+(4, N'Ngân hàng LQV triển khai gói tín dụng 100.000.000 tỷ đồng hỗ trợ khách hàng bị ảnh hưởng bởi dịch Covid 19.'),
+(5, N'Thứ Năm, 02/04 nghỉ lễ Giổ Tổ Hùng Vương.'),
+(6, N'Ngân hàng LQV với các giải pháp hỗ trợ khách hàng bị ảnh hưởng bởi dịch Covid-19.'),
+(7, N'Ngân hàng LQV ủng hộ 1.000 tỷ đồng và thiết bị y tế chống dịch Covid-19.'),
+(8, N'Tăng cường bảo mật thông tin với Internet Banking.'),
+(9, N'Hàng ngàn ưu đãi, hoàn tiền khi mua sắm trực tuyến trên TIKI.'),
+(10, N'Giải ngân 20.000 tỷ đồng hỗ trợ doanh nghiệp gặp khó khăn.'),
+(11, N'Thứ Năm, 30/4 và thứ Sáu, 1/5 nghỉ lễ Giải phóng Miền Nam và Quốc Tế Lao Động.');
 
 -- --------------------------------------------------------
 

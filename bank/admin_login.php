@@ -19,15 +19,15 @@
     <form action="admin_login_action.php" method="post">
         <div class="flex-container-1">
             <div class="flex-item">
-                <h2>Administrator Login</h2>
+                <h2>Đăng nhập quản trị viên</h2>
             </div>
 
-            <label><b>Username</b></label>
+            <label><b>Tài khoản</b></label>
             <div class="flex-item">
                 <input type="text" name="admin_uname" required>
             </div>
 
-            <label><b>Password</b></label>
+            <label><b>Mật khẩu</b></label>
             <div class="flex-item">
                 <input type="password" name="admin_psw" required>
             </div>
@@ -35,11 +35,11 @@
 
         <div class="flex-container-2">
             <div class="flex-item">
-                <button type="submit">Login</button>
+                <button type="submit">Đăng nhập</button>
             </div>
 
             <div class="flex-item">
-                <button type="button" class="cancelbtn">Cancel</button>
+                <button type="button" class="cancelbtn" onclick="location.href='./home.php'">Quay về trang chủ</button>
             </div>
         </div>
     </form>
