@@ -55,22 +55,22 @@
         <div class="flex-item">
             <?php
             if ($success == 1) { ?>
-                <p id="info"><?php echo "Beneficiary successfully added !\n"; ?></p>
+                <p id="info"><?php echo "Người thụ hưởng thêm thành công!\n"; ?></p>
             <?php } ?>
 
             <?php
             if ($success == 0) { ?>
-                <p id="info"><?php echo "Invalid data entered/Connection error !\n"; ?></p>
+                <p id="info"><?php echo "Dữ liệu không hợp lệ / Lỗi kết nối!\n"; ?></p>
             <?php } ?>
 
             <?php
             if ($success == -1) { ?>
-                <p id="info"><?php echo "Can't add self as beneficiary !\n"; ?></p>
+                <p id="info"><?php echo "Không thể tự thêm mình là người thụ hưởng!\n"; ?></p>
             <?php } ?>
         </div>
 
         <div class="flex-item">
-            <a href="./beneficiary.php" class="button">Go Back</a>
+            <a href="./beneficiary.php" class="button">Trở vềk</a>
         </div>
     </div>
 

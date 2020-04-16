@@ -17,25 +17,25 @@
     <form class="news_form" action="post_news_action.php" method="post">
         <div class="flex-container">
             <div class=container>
-                <label>News Headline :</label><br>
+                <label>Tiêu đề: </label><br>
                 <input name="headline" size="50" type="text" required />
             </div>
         </div>
 
         <div class="flex-container">
             <div class=container>
-                <label>Details :</label><br>
+                <label>Chi tiết: </label><br>
                 <textarea name="news_details" style="height: 200px; width: 60vw;" required /></textarea>
             </div>
         </div>
 
         <div class="flex-container">
             <div class="container">
-                <button type="submit">Submit</button>
+                <button type="submit">Đồng ý</button>
             </div>
 
             <div class="container">
-                <button type="reset" class="reset" onclick="return confirmReset();">Reset</button>
+                <button type="reset" class="reset" onclick="return confirmReset();">Đặt lại</button>
             </div>
         </div>
 

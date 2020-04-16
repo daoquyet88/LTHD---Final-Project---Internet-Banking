@@ -85,27 +85,27 @@
         <div class="flex-item">
             <?php
             if ($err_no == -1) { ?>
-                <p id="info"><?php echo "Connection Error ! Please try again later.\n"; ?></p>
+                <p id="info"><?php echo "Lỗi kết nối! Vui lòng thử lại.\n"; ?></p>
             <?php } ?>
 
             <?php
             if ($err_no == 0) { ?>
-                <p id="info"><?php echo "Transaction Successful !\n"; ?></p>
+                <p id="info"><?php echo "Giao dịch thành công!\n"; ?></p>
             <?php } ?>
 
             <?php
             if ($err_no == 1) { ?>
-                <p id="info"><?php echo "Insufficient Funds !\n"; ?></p>
+                <p id="info"><?php echo "Không đủ tiền giao dịch!\n"; ?></p>
             <?php } ?>
 
             <?php
             if ($err_no == 2) { ?>
-                <p id="info"><?php echo "Wrong PIN Entered !\n"; ?></p>
+                <p id="info"><?php echo "Nhập sai mã PIN!\n"; ?></p>
             <?php } ?>
         </div>
 
         <div class="flex-item">
-            <a href="./atm_simulator.php" class="button">Go Back</a>
+            <a href="./atm_simulator.php" class="button">Trở về</a>
         </div>
     </div>
 

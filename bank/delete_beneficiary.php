@@ -60,7 +60,7 @@
         <?php $conn->close(); ?>
 
         <div class="flex-item">
-            <a href="./beneficiary.php" class="button">Go Back</a>
+            <a href="./beneficiary.php" class="button">Trở về</a>
         </div>
 
     </div>

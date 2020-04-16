@@ -38,7 +38,7 @@
                 <?php
                 }
                 else { ?>
-                    <p id="info"><?php echo "Error: " . $sql0 . "<br>" . $conn->error . "<br>"; ?></p>
+                    <p id="info"><?php echo "Lỗi: " . $sql0 . "<br>" . $conn->error . "<br>"; ?></p>
                 <?php
                 }
             ?>
@@ -46,7 +46,7 @@
         <?php $conn->close(); ?>
 
         <div class="flex-item">
-            <a href="./customer_home.php" class="button">Home</a>
+            <a href="./customer_home.php" class="button">Trang chủ</a>
         </div>
 
     </div>

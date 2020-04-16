@@ -29,11 +29,11 @@
     <div class="search-bar-wrapper">
         <div class="search-bar" id="the-search-bar">
             <div class="flex-item-search-bar" id="fi-search-bar">
-                <a class="add-button" href="./add_beneficiary.php">Add</a>
+                <a class="add-button" href="./add_beneficiary.php">Thêm</a>
 
                 <form class="search_form" action="" method="post">
                     <div class="flex-item-search">
-                        <input name="search" size="30" type="text" placeholder="Search Beneficiaries..." />
+                        <input name="search" size="30" type="text" placeholder="Tìm kiếm người thụ hưởng" />
                     </div>
 
                     <div class="flex-item-search-button">
@@ -41,13 +41,13 @@
                     </div>
 
                     <div class="flex-item-by">
-                        <label for="by">By :</label>
+                        <label for="by">Bằng: </label>
                     </div>
 
                     <div class="flex-item-search-by">
                         <select name="by" id="by">
-                            <option value="name">Name</option>
-                            <option value="acno">Ac/No</option>
+                            <option value="name">Tên</option>
+                            <option value="acno">Số tài khoản</option>
                         </select>
                     </div>
                 </form>
@@ -57,7 +57,7 @@
     </div>
 
     <div class="flex-container">
-        <p id="info">Send to, Add/Delete Beneficiaries.</p>
+        <p id="info">Gửi đến, thêm / Xóa người thụ hưởng.</p>
         <?php
             $result = $conn->query($sql0);
             $isBenefPresent = 0;
@@ -101,7 +101,7 @@
                         </div>
                         <div class="flex-item-2">
                             <p id="name"><?php echo $row1["first_name"] . " " . $row1["last_name"]; ?></p>
-                            <p id="acno"><?php echo "Ac/No : " . $row1["account_no"]; ?></p>
+                            <p id="acno"><?php echo "Số tài khoản: " . $row1["account_no"]; ?></p>
                         </div>
                         <div class="flex-item-1">
                             <div class="dropdown">
@@ -111,9 +111,9 @@
                               <button onclick="dropdown_func(<?php echo $i ?>)" class="dropbtn"></button>
                               <div id="dropdown<?php echo $i ?>" class="dropdown-content">
                                 <!--Pass the customer trans_id as a get variable in the link-->
-                                <a href="./send_funds.php?cust_id=<?php echo $row1["cust_id"] ?>">Send</a>
+                                <a href="./send_funds.php?cust_id=<?php echo $row1["cust_id"] ?>">Gửi</a>
                                 <a href="./delete_beneficiary.php?cust_id=<?php echo $row1["cust_id"] ?>"
-                                     onclick="return confirm('Are you sure?')">Delete</a>
+                                     onclick="return confirm('Bạn chắc chứ?')">Xóa</a>
                               </div>
                             </div>
                         </div>
@@ -122,12 +122,12 @@
             <?php }}}
 
             if ($isBenefPresent == 0) { ?>
-                <p id="none"> No beneficiaries found :(</p>
+                <p id="none">Không tìm thấy người thụ hưởng</p>
             <?php }
             if ($back_button) { ?>
                 <div class="flex-container-bb">
                     <div class="back_button">
-                        <a href="./beneficiary.php" class="button">Go Back</a>
+                        <a href="./beneficiary.php" class="button">Trở về</a>
                     </div>
                 </div>
             <?php }

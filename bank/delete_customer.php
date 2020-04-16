@@ -72,7 +72,7 @@
         <?php $conn->close(); ?>
 
         <div class="flex-item">
-            <a href="/manage_customers.php" class="button">Go Back</a>
+            <a href="./manage_customers.php" class="button">Trở về</a>
         </div>
 
     </div>

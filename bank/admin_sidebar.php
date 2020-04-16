@@ -8,13 +8,12 @@
 <body>
     <div class="sidenav" id="theSideNav">
         <a href="javascript:void(0)" id="closebtn" onclick="closeNav()">&times;</a>
-        <a href="./admin_home.php">Home</a>
-        <a id="label">My Customers</a>
-        <a href="./customer_add.php">Add Customer</a>
-        <a href="./manage_customers.php">Manage Customers</a>
-        <a href="#h">Customer Griveances</a>
+        <a href="./admin_home.php">Trang chủ</a>
+        <a id="label">Khách hàng</a>
+        <a href="./customer_add.php">Thêm khách hàng</a>
+        <a href="./manage_customers.php">Quản lý khách hàng</a>
         <a id="label">Website Management</a>
-        <a href="./post_news.php">Post News</a>
+        <a href="./post_news.php">Đăng tin tức</a>
     </div>
 
 <script>

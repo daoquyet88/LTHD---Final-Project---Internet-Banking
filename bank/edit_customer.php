@@ -60,35 +60,35 @@
 <body>
     <form class="add_customer_form" action="edit_customer_action.php" method="post">
         <div class="flex-container-form_header">
-            <h1 id="form_header">Edit/View Customer details . . .</h1>
+            <h1 id="form_header">Chỉnh sửa / Xem chi tiết khách hàng</h1>
         </div>
 
         <div class="flex-container">
             <div class=container>
-                <label>Customer ID : <label id="info_label"> <?php echo $_SESSION['cust_id'] ?> </label></label>
+                <label>Mã khach hàng: <label id="info_label"> <?php echo $_SESSION['cust_id'] ?> </label></label>
             </div>
         </div>
 
         <div class="flex-container">
             <div class=container>
-                <label>First Name :</label><br>
+                <label>Họ: </label><br>
                 <input name="fname" size="30" type="text" value="<?php echo $fname ?>" required />
             </div>
             <div  class=container>
-                <label>Last Name :</b></label><br>
+                <label>Tên: </b></label><br>
                 <input name="lname" size="30" type="text" value="<?php echo $lname ?>" required />
             </div>
         </div>
 
         <div class="flex-container">
             <div class=container>
-                <label>Balance (INR) : <label id="info_label"> <?php echo number_format($balance) ?> </label></label>
+                <label>Số dư (VND): <label id="info_label"> <?php echo number_format($balance) ?> </label></label>
             </div>
         </div>
 
         <div class="flex-container">
             <div class=container>
-                <label>Gender :
+                <label>Giới tính:
                     <label id="info_label">
                     <?php
                         if ($gender == "male") {echo "Male";}
@@ -102,39 +102,39 @@
 
         <div class="flex-container">
             <div class=container>
-                <label>Date of Birth :</label><br>
+                <label>Ngày sinh: </label><br>
                 <input name="dob" size="30" type="text" placeholder="yyyy-mm-dd" value="<?php echo $dob ?>" required />
             </div>
         </div>
 
         <div class="flex-container">
             <div class=container>
-                <label>Aadhar No :</label><br>
+                <label>Số chứng minh thư: </label><br>
                 <input name="aadhar" size="25" type="text" value="<?php echo $aadhar ?>" required />
             </div>
         </div>
 
         <div class="flex-container">
             <div class=container>
-                <label>Email-ID :</label><br>
+                <label>Email: </label><br>
                 <input name="email" size="30" type="text" value="<?php echo $email ?>" required />
             </div>
             <div  class=container>
-                <label>Phone No. :</b></label><br>
+                <label>Số điện thoại: </b></label><br>
                 <input name="phno" size="30" type="text" value="<?php echo $phno ?>" required />
             </div>
         </div>
 
         <div class="flex-container">
             <div class=container>
-                <label>Address :</label><br>
+                <label>Địa chỉ: </label><br>
                 <textarea name="address" required /><?php echo $address ?></textarea>
             </div>
         </div>
 
         <div class="flex-container">
             <div class=container>
-                <label>Bank Branch :</label>
+                <label>Chi nhánh ngân hàng: </label>
             </div>
             <div  class=container>
                 <select name="branch">
@@ -149,35 +149,35 @@
 
         <div class="flex-container">
             <div class=container>
-                <label>Account No :</label><br>
+                <label>Số tài khoản: </label><br>
                 <input name="acno" size="25" type="text" value="<?php echo $acno ?>" required />
             </div>
         </div>
 
         <div class="flex-container">
             <div  class=container>
-                <label>PIN(4 digit) :</b></label><br>
+                <label>Mã PIN (4 số): </b></label><br>
                 <input name="pin" size="15" type="text" value="<?php echo $pin ?>" required />
             </div>
         </div>
 
         <div class="flex-container">
             <div class=container>
-                <label>Username :</label><br>
+                <label>Tài khoản: </label><br>
                 <input name="cus_uname" size="30" type="text" value="<?php echo $cus_uname ?>" required />
             </div>
             <div  class=container>
-                <label>Password :</b></label><br>
+                <label>Mật khẩu: </b></label><br>
                 <input name="cus_pwd" size="30" type="text" value="<?php echo $cus_pwd ?>" required />
             </div>
         </div>
 
         <div class="flex-container">
             <div class="container">
-                <a href="/manage_customers.php" class="button">Go Back</a>
+                <a href="./manage_customers.php" class="button">Trở về</a>
             </div>
             <div class="container">
-                <button type="submit">Update</button>
+                <button type="submit">Cập nhật</button>
             </div>
         </div>
 

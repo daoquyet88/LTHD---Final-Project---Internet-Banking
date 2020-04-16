@@ -69,32 +69,32 @@
         <div class="flex-item">
             <?php
             if ($err_no == -1) { ?>
-                <p id="info"><?php echo "Connection Error ! Please try again later.\n"; ?></p>
+                <p id="info"><?php echo "Lỗi kết nối! Vui lòng thử lại. \n"; ?></p>
             <?php } ?>
 
             <?php
             if ($err_no == 0) { ?>
-                <p id="info"><?php echo $info_string." successfully changed !\n"; ?></p>
+                <p id="info"><?php echo $info_string."Thay đổi thành công!\n"; ?></p>
             <?php } ?>
 
             <?php
             if ($err_no == 1) { ?>
-                <p id="info"><?php echo "Old ".$info_string." is incorrect !\n"; ?></p>
+                <p id="info"><?php echo "Mật khẩu cũ không chính xác !\n"; ?></p>
             <?php } ?>
 
             <?php
             if ($err_no == 2) { ?>
-                <p id="info"><?php echo $info_string."s do not match !\n"; ?></p>
+                <p id="info"><?php echo "Mật khẩu không trùng khớp!\n"; ?></p>
             <?php } ?>
 
             <?php
             if ($err_no == 3) { ?>
-                <p id="info"><?php echo "Old & new ".$info_string."s are same !\n"; ?></p>
+                <p id="info"><?php echo "Mật khẩu cũ và mới giống nhau!\n"; ?></p>
             <?php } ?>
         </div>
 
         <div class="flex-item">
-            <a href="/customer_profile.php" class="button">Go Back</a>
+            <a href="./customer_profile.php" class="button">Trở về</a>
         </div>
     </div>
 

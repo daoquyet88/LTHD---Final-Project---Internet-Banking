@@ -101,26 +101,26 @@
     <div class="search-bar-wrapper">
         <div class="search-bar" id="the-search-bar">
             <div class="flex-item-search-bar" id="fi-search-bar">
-                <button id="search" onclick="document.getElementById('id01').style.display='block'">Filter</button>
+                <button id="search" onclick="document.getElementById('id01').style.display='block'">Bộ lọc</button>
 
                 <div class="flex-item-by">
-                    <label id="sort">Sort By :</label>
+                    <label id="sort">Sắp xếp: </label>
                 </div>
 
                 <div class="flex-item-search-by">
                     <select name="by" onChange="window.location.href=this.value">
                         <option selected disabled hidden>
-                            <?php if (empty($_GET['sort'])) {?>Tn. ID &darr;<?php } else { ?>
-                                <?php if ($sort == 'tid_down') {?>Tn. ID &darr;<?php } ?>
-                                <?php if ($sort == 'tid_up') {?>Tn. ID &uarr;<?php } ?>
-                                <?php if ($sort == 'date_down') {?>Date &darr;<?php } ?>
-                                <?php if ($sort == 'date_up') {?>Date &uarr;<?php } ?>
+                            <?php if (empty($_GET['sort'])) {?>STT &darr;<?php } else { ?>
+                                <?php if ($sort == 'tid_down') {?>STT &darr;<?php } ?>
+                                <?php if ($sort == 'tid_up') {?>STT &uarr;<?php } ?>
+                                <?php if ($sort == 'date_down') {?>Ngày giao dịch &darr;<?php } ?>
+                                <?php if ($sort == 'date_up') {?>Ngày giao dịch &uarr;<?php } ?>
                             <?php } ?>
                         </option>
-                        <option value="transactions.php?sort=tid_down">Tn. ID &darr;</option>
-                        <option value="transactions.php?sort=tid_up">Tn. ID &uarr;</option>
-                        <option value="transactions.php?sort=date_down">Date &darr;</option>
-                        <option value="transactions.php?sort=date_up">Date &uarr;</option>
+                        <option value="transactions.php?sort=tid_down">STT &darr;</option>
+                        <option value="transactions.php?sort=tid_up">STT &uarr;</option>
+                        <option value="transactions.php?sort=date_down">Ngày giao dịch &darr;</option>
+                        <option value="transactions.php?sort=date_up">Ngày giao dịch &uarr;</option>
                     </select>
                 </div>
 
@@ -130,37 +130,37 @@
 
     <div id="id01" class="modal">
 
-      <form class="modal-content animate" action="" method="post">
+        <form class="modal-content animate" action="" method="post">
         <div class="imgcontainer">
-          <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Filter">&times;</span>
+            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Filter">&times;</span>
         </div>
 
         <div class="container">
-            <h1 id="filter">Filter</h1>
-            <p id="filter">(Leave blank to remove filter)</p>
-          <label>Trans. Remarks :</label>
-          <input type="text" placeholder="Enter Remarks" name="search_term">
+            <h1 id="filter">Bộ lọc</h1>
+            <p id="filter">(Để trống để xóa bộ lọc)</p>
+            <label>Ghi chú giao dịch: </label>
+            <input type="text" placeholder="Nhập ghi chú" name="search_term">
 
-          <label>Duration (yyyy-mm-dd) :</label>
-          <div class="duration-container">
-              <div class="date-container">
-                  <input id="date" type="text" placeholder="From" name="date_from">
-              </div>
-              <p id="minus">&minus;<b</p>
-              <div class="date-container">
-                  <input id="date" type="text" placeholder="Upto" name="date_to">
-              </div>
-          </div>
+            <label>Ngày giao dịch (yyyy-mm-dd):</label>
+            <div class="duration-container">
+                <div class="date-container">
+                    <input id="date" type="text" placeholder="Từ ngày" name="date_from">
+                </div>
+                <p id="minus">&minus;<b</p>
+                <div class="date-container">
+                    <input id="date" type="text" placeholder="Đến ngày" name="date_to">
+                </div>
+            </div>
 
 
-          <button id="submit" type="submit">Go</button>
+            <button id="submit" type="submit">Đồng ý</button>
         </div>
 
-      </form>
+        </form>
     </div>
 
     <div class="flex-container">
-        <p id="none">Filter : <?php echo $filter_indicator ?></p>
+        <p id="none">Bộ lọc: <?php echo $filter_indicator ?></p>
     </div>
 
     <div class="flex-container">
@@ -171,12 +171,12 @@
             if ($result->num_rows > 0) {?>
                 <table id="transactions">
                     <tr>
-                        <th>Trans. ID</th>
-                        <th>Date & Time (IST)</th>
-                        <th>Remarks</th>
-                        <th>Debit (INR)</th>
-                        <th>Credit (INR)</th>
-                        <th>Balance (INR)</th>
+                        <th>STT</th>
+                        <th>Thời gian giao dịch</th>
+                        <th>Ghi chú</th>
+                        <th>Ghi nợ (VND)</th>
+                        <th>Tín dụng (VND)</th>
+                        <th>Số dư (VND)</th>
                     </tr>
         <?php
             // output data of each row
@@ -199,7 +199,7 @@
             </table>
             <?php
             } else {  ?>
-                <p id="none"> No results found :(</p>
+                <p id="none">Không tìm thấy kết quả tìm kiếm</p>
             <?php }
             $conn->close(); ?>
 

@@ -18,22 +18,22 @@
         <div class="flex-item-message">
             <h1 id="session-sub">Uh-Oh !</h1>
             <p id="session-sub">
-                We have error connecting to database !<br>
+                Lỗi kết nối dữ liệu!<br>
             </p>
             <p id="session">
-                <b>Error Message: </b>
+                <b>Lỗi: </b>
                 <?php
                     if (isset($_GET['error'])) {
                         echo $_GET['error'];
                     }
                 ?><br><br>
-                Make sure that the database login credentials are correct
-                and/or the server is set up properly/responding.<br><br>
-                Please try again after sometime. :)
+                Đảm bảo rằng thông tin đăng nhập cơ sở dữ liệu là chính xác
+                và / hoặc máy chủ được thiết lập đúng / phản hồi.<br><br>
+                Vui lòng thử lại sau một thời gian.
             </p>
         </div>
         <div class="flex-item">
-            <a href="/home.php" class="button">Go Home</a>
+            <a href="./home.php" class="button">Trang chủ</a>
         </div>
     </div>
 

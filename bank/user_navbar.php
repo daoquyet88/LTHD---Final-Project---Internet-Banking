@@ -12,8 +12,8 @@
             <a href="javascript:void(0);" class="icon" onclick="openNav()" id="hamburger">
                 &#9776;
             </a>
-            <a id="logout" href="logout_action.php" style="border-top-left-radius: 3px;" 
-                    onclick="return confirm('Are you sure?')">Logout</a>
+            <a id="logout" href="./logout_action.php" style="border-top-left-radius: 3px;" 
+                    onclick="return confirm('Are you sure?')">Đăng xuất</a>
         </div>
     </div>
 

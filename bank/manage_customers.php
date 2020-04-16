@@ -50,13 +50,13 @@
                     </div>
 
                     <div class="flex-item-by">
-                        <label>By :</label>
+                        <label>Bằng: </label>
                     </div>
 
                     <div class="flex-item-search-by">
                         <select name="by">
-                            <option value="name">Name</option>
-                            <option value="acno">Ac/No</option>
+                            <option value="name">Tên</option>
+                            <option value="acno">Số tài khoản</option>
                         </select>
                     </div>
                 </form>
@@ -81,7 +81,7 @@
                     </div>
                     <div class="flex-item-2">
                         <p id="name"><?php echo $row["first_name"] . " " . $row["last_name"]; ?></p>
-                        <p id="acno"><?php echo "Ac/No : " . $row["account_no"]; ?></p>
+                        <p id="acno"><?php echo "Số tài khoản: " . $row["account_no"]; ?></p>
                     </div>
                     <div class="flex-item-1">
                         <div class="dropdown">
@@ -91,10 +91,10 @@
                           <button onclick="dropdown_func(<?php echo $i ?>)" class="dropbtn"></button>
                           <div id="dropdown<?php echo $i ?>" class="dropdown-content">
                             <!--Pass the customer trans_id as a get variable in the link-->
-                            <a href="./edit_customer.php?cust_id=<?php echo $row["cust_id"] ?>">View / Edit</a>
-                            <a href="./transactions.php?cust_id=<?php echo $row["cust_id"] ?>">Transactions</a>
+                            <a href="./edit_customer.php?cust_id=<?php echo $row["cust_id"] ?>">Xem / Sửa</a>
+                            <a href="./transactions.php?cust_id=<?php echo $row["cust_id"] ?>">Giao dịch</a>
                             <a href="./delete_customer.php?cust_id=<?php echo $row["cust_id"] ?>"
-                                 onclick="return confirm('Are you sure?')">Delete</a>
+                                 onclick="return confirm('Bạn chắc chứ?')">Xóa</a>
                           </div>
                         </div>
                     </div>
@@ -102,12 +102,12 @@
 
             <?php }
             } else {  ?>
-                <p id="none"> No results found :(</p>
+                <p id="none">Không tìm thấy kết quả tìm kiếm</p>
             <?php }
             if ($back_button) { ?>
                 <div class="flex-container-bb">
                     <div class="back_button">
-                        <a href="./manage_customers.php" class="button">Go Back</a>
+                        <a href="./manage_customers.php" class="button">Trở về</a>
                     </div>
                 </div>
             <?php }

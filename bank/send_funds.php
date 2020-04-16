@@ -24,7 +24,7 @@
 <body>
     <form class="add_customer_form" action="send_funds_action.php?cust_id=<?php echo $id ?>" method="post">
         <div class="flex-container-form_header">
-            <h1 id="form_header">Transfer Funds</h1>
+            <h1 id="form_header">Chuyển khoản</h1>
         </div>
 
         <div class="flex-container">
@@ -39,35 +39,35 @@
 
         <div class="flex-container">
             <div class=container>
-                <label>Account No : <label id="info_label"><?php echo $row0["account_no"] ?></label></label>
+                <label>Số tài khoản: <label id="info_label"><?php echo $row0["account_no"] ?></label></label>
             </div>
         </div>
 
         <div class="flex-container">
             <div class=container>
-                <label>Enter Amount (in INR) :</label><br>
+                <label>Nhập số tiền (VND): </label><br>
                 <input name="amt" size="24" type="text" required />
             </div>
         </div>
 
         <div class="flex-container">
             <div  class=container>
-                <label>Enter your password :</b></label><br>
+                <label>Nhập mật khẩu: </b></label><br>
                 <input name="password" size="24" type="password" required />
             </div>
         </div>
 
         <div class="flex-container">
             <div class="container">
-                <a href="/beneficiary.php" class="button">Go Back</a>
+                <a href="./beneficiary.php" class="button">Trở về</a>
             </div>
 
             <div class="container">
-                <button type="submit">Submit</button>
+                <button type="submit">Đồng ý</button>
             </div>
 
             <div class="container">
-                <button type="reset" class="reset" onclick="return confirmReset();">Reset</button>
+                <button type="reset" class="reset" onclick="return confirmReset();">Đặt lại</button>
             </div>
         </div>
 
