@@ -1,4 +1,27 @@
 <?php
+if(isset($_POST['submit'])){
+   $cust_uname;
+   $captcha;
+   if(isset($_POST['cust_uname'])){
+      $cust_uname = $_POST['cust_uname'];
+   }
+   if(isset($_POST['g-recaptcha-response'])){
+      $captcha = $_POST['g-recaptcha-response'];
+   }
+   if(!$captcha){
+      echo '<h2>Hay xac nhan CAPTCHA</h2>';
+   }else{
+      $response = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=6LfJDeoUAAAAAEx_BIbMR75oMfxJMf8kA5EuS15L&response=".$captcha."&remoteip=".$_SERVER['REMOTE_ADDR']);
+      if($response.success == false){
+         echo '<h2>SPAM!</h2>';
+      }else{
+         echo '<h2>'.$name.' Khong phai robot :)</h2>';
+      }
+   }
+}
+?>
+
+<?php
     include "header.php";
     include "navbar.php";
 
@@ -10,6 +33,7 @@
 
 <!DOCTYPE html>
 <html>
+<script src='https://www.google.com/recaptcha/api.js?hl=vi'></script>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/home_style.css">
@@ -37,6 +61,8 @@
                     <div class="flex-item">
                         <input type="password" name="cust_psw" placeholder=" Mật khẩu" required>
                     </div>
+
+                    <div class="g-recaptcha" data-sitekey='6LfJDeoUAAAAAEssrVanyIBmz_0IHPwq1ldGsvmn'></div>
 
                     <div class="flex-item" style="display: flex;
                                                 justify-content: center;"  >
