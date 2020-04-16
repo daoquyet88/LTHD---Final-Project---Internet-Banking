@@ -58,37 +58,36 @@
 <body>
     <form class="add_customer_form" action="customer_profile_action.php" method="post">
         <div class="flex-container-form_header">
-            <h1 id="form_header">Your account details . . .</h1>
+            <h1 id="form_header">Thông tin tài khoản</h1>
         </div>
 
         <div class="flex-container">
             <div class=container>
-                <label>First Name : <label id="info_label"><?php echo $fname ?></label></label>
+                <label>Họ: <label id="info_label"><?php echo $fname ?></label></label>
             </div>
             <div class=container>
-                <label>Last Name : <label id="info_label"><?php echo $lname ?></label></label>
-            </div>
-        </div>
-
-        <div class="flex-container">
-            <div class=container>
-                <label>Account No : <label id="info_label"><?php echo $acno ?></label></label>
+                <label>Tên: <label id="info_label"><?php echo $lname ?></label></label>
             </div>
         </div>
 
         <div class="flex-container">
             <div class=container>
-                <label>Balance (INR) : <label id="info_label"><?php echo number_format($balance) ?></label></label>
+                <label>Số tài khoản: <label id="info_label"><?php echo $acno ?></label></label>
             </div>
         </div>
 
         <div class="flex-container">
             <div class=container>
-                <label>Gender :
-                    <label id="info_label">
+                <label>Số dư (VND): <label id="info_label"><?php echo number_format($balance) ?></label></label>
+            </div>
+        </div>
+
+        <div class="flex-container">
+            <div class=container>
+                <label>Giới tính: <label id="info_label">
                     <?php
-                        if ($gender == "male") {echo "Male";}
-                        elseif ($gender == "female") {echo "Female";}
+                        if ($gender == "Nam") {echo "Nam";}
+                        elseif ($gender == "Nữ") {echo "Nữ";}
                         else {echo "Others";}
                     ?>
                     <label>
@@ -98,44 +97,43 @@
 
         <div class="flex-container">
             <div class=container>
-                <label>Date of Birth : <label id="info_label"><?php echo $dob ?></label></label>
+                <label>Ngày sinh: <label id="info_label"><?php echo $dob ?></label></label>
             </div>
         </div>
 
         <div class="flex-container">
             <div class=container>
-                <label>Aadhar No : <label id="info_label"><?php echo $aadhar ?></label></label>
+                <label>Số chứng minh thư: <label id="info_label"><?php echo $aadhar ?></label></label>
             </div>
         </div>
 
         <div class="flex-container">
             <div class=container>
-                <label>Email-ID :</label><br>
+                <label>Email: </label><br>
                 <input name="email" size="30" type="text" value="<?php echo $email ?>" required />
             </div>
             <div class=container>
-                <label>Username :</label><br>
+                <label>Tên tài khoản: </label><br>
                 <input name="cus_uname" size="30" type="text" value="<?php echo $cus_uname ?>" required />
             </div>
         </div>
 
         <div class="flex-container">
             <div  class=container>
-                <label>Phone No. : <label id="info_label"><?php echo $phno ?></label></label>
+                <label>Số điện thoại: <label id="info_label"><?php echo $phno ?></label></label>
             </div>
         </div>
 
         <div class="flex-container">
             <div class=container>
-                <label>Address :</label><br>
+                <label>Địa chỉ: </label><br>
                 <textarea name="address" required /><?php echo $address ?></textarea>
             </div>
         </div>
 
         <div class="flex-container">
             <div class=container>
-                <label>Bank Branch :
-                    <label id="info_label">
+                <label>Chi nhánh ngân hàng: <label id="info_label">
                         <?php
                             if ($branch == "delhi") {echo "Delhi";}
                             elseif ($branch == "newyork") {echo "New York";}
@@ -150,13 +148,13 @@
 
         <div class="flex-container">
             <div class="container">
-                <a href="./customer_home.php" class="button">Home</a>
+                <a href="./customer_home.php" class="button">Trang chủ</a>
             </div>
             <div class="container">
-                <button type="submit">Update</button>
+                <button type="submit">Cập nhật</button>
             </div>
             <div class="container">
-                <a href="./pass_change.php" class="password-button">Change Password/PIN</a>
+                <a href="./pass_change.php" class="password-button">Đổi mật khẩu / mã PIN</a>
             </div>
         </div>
 

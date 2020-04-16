@@ -28,9 +28,8 @@
             <a href="javascript:void(0);" class="icon" onclick="openNav()" id="hamburger">
                 &#9776;
             </a>
-            <a id="user">Welcome, &nbsp<?php echo $row["first_name"]; ?> !</a>
-            <a id="logout" href="./logout_action.php" onclick="return confirm('Are you sure?')">Logout</a>
-            <a id="profile" href="./customer_profile.php">My Profile</a>
+            <a id="logout" href="./logout_action.php" onclick="return confirm('Bạn chắc chứ?')">Đăng xuất</a>
+            <a id="profile" href="./customer_profile.php">Hồ sơ cá nhân</a>
         </div>
     </div>
 

@@ -66,7 +66,7 @@
 
     <script>
     function confirmReset() {
-        return confirm('Do you really want to reset?')
+        return confirm('Bạn thực sự muốn đặt lại?')
     }
     </script>
 

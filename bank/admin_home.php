@@ -17,7 +17,7 @@
     <div class="flex-container">
         <div class="flex-item">
             <h1 id="customer">
-                Welcome Admin !
+                Xin chào, quản trị viên!
             </h1>
             <p id="customer" style="max-width:800px">
                 Từ đây bạn có thể quản lý tất cả các cài đặt Internet Banking cốt lõi.  Bạn có thể thêm / quản lý khách hàng, xem giao dịch của họ, chỉnh sửa chi tiết của họ và thậm chí xóa họ.  Bạn cũng có thể đăng tin tức trên trang web. 

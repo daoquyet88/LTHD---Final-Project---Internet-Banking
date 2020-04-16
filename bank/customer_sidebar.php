@@ -13,9 +13,7 @@
         <a href="./customer_transactions.php">Lịch Sử Giao Dịch</a>
         <a id="label">Gửi/Nhận</a>
         <a href="./beneficiary.php">Chuyển tiền</a>
-        <a href="./atm_simulator.php">ATM Simulator</a>
-        <a id="label">Contact Us</a>
-        <a href="#">Submit Griveance</a>
+        <a href="./atm_simulator.php">ATM trực tuyến</a>
     </div>
 
 <script>

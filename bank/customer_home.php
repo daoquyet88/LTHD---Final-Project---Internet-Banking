@@ -44,14 +44,13 @@
     <div class="flex-container">
         <div class="flex-item">
             <h1 id="customer">
-                Welcome, <?php echo $row0["first_name"] ?>&nbsp<?php echo $row0["last_name"] ?>&nbsp!
-                <br>AC/No: <?php echo $row0["account_no"]; ?>
+                Xin chào, <?php echo $row0["first_name"] ?>&nbsp<?php echo $row0["last_name"] ?>!
+                <br>Số tài khoản: <?php echo $row0["account_no"]; ?>
             </h1>
             <p id="customer">
-                &#9656 Balance (INR): <?php echo number_format($row1["balance"]); ?>/-
-                <br>&#9656 You have <?php echo $row2["COUNT(*)"]; ?> beneficiaries.
-                <br>&#9656 Your last transaction (<?php echo $type; ?>) of&nbspRs.&nbsp<?php
-                echo number_format($transaction); ?><br>
+                &#9656 Số dư (VND): <?php echo number_format($row1["balance"]); ?><br>
+                &#9656 Bạn có <?php echo $row2["COUNT(*)"]; ?> thụ hưởng.<br>
+                &#9656 Giao dịch cuối cùng của bạn (<?php echo $type; ?>) of&nbspRs.&nbsp <?php echo number_format($transaction); ?><br>
                 on <?php echo $sanitized_time; ?>, was: "<?php echo $row1["remarks"]; ?>".
             </p>
         </div>

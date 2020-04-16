@@ -57,7 +57,7 @@
         <div class="flex-item">
             <?php
                 if (($conn->query($sql0) === TRUE)) { ?>
-                    <p id="info"><?php echo "Values Updated Successfully !"; ?></p>
+                    <p id="info"><?php echo "Cập nhật thành công!"; ?></p>
                 <?php
                 }
                 else { ?>
@@ -69,7 +69,7 @@
         <?php $conn->close(); ?>
 
         <div class="flex-item">
-            <a href="/manage_customers.php" class="button">Go Back</a>
+            <a href="/manage_customers.php" class="button">Trở về</a>
         </div>
 
     </div>
