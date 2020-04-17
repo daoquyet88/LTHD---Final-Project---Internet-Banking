@@ -62,10 +62,9 @@ if(isset($_POST['submit'])){
                         <input type="password" name="cust_psw" placeholder=" Mật khẩu" required>
                     </div>
 
-                    <div class="g-recaptcha" data-sitekey='6LfJDeoUAAAAAEssrVanyIBmz_0IHPwq1ldGsvmn'></div>
+                    <div class="g-recaptcha" data-sitekey='6LfJDeoUAAAAAEssrVanyIBmz_0IHPwq1ldGsvmn' style="display: flex; justify-content: center;"></div>
 
-                    <div class="flex-item" style="display: flex;
-                                                justify-content: center;"  >
+                    <div class="flex-item" style="display: flex; justify-content: center;">
                         <button type="submit">Đăng nhập</button>
                     </div>
                 </form>

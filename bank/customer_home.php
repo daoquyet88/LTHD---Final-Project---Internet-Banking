@@ -18,15 +18,15 @@
 
     if ($row1["debit"] == 0) {
         $transaction = $row1["credit"];
-        $type = "credit";
+        $type = "Giao dịch tín dụng";
     }
     else {
         $transaction = $row1["debit"];
-        $type = "debit";
+        $type = "Giao dịch ghi nợ";
     }
 
     $time = strtotime($row1["trans_date"]);
-    $sanitized_time = date("d/m/Y, g:i A", $time);
+    $sanitized_time = date("d/m/Y, H:i", $time);
 
     $sql2 = "SELECT COUNT(*) FROM beneficiary".$id;
     $result2 = $conn->query($sql2);
@@ -50,8 +50,10 @@
             <p id="customer">
                 &#9656 Số dư (VND): <?php echo number_format($row1["balance"]); ?><br>
                 &#9656 Bạn có <?php echo $row2["COUNT(*)"]; ?> thụ hưởng.<br>
-                &#9656 Giao dịch cuối cùng của bạn (<?php echo $type; ?>) of&nbspRs.&nbsp <?php echo number_format($transaction); ?><br>
-                on <?php echo $sanitized_time; ?>, was: "<?php echo $row1["remarks"]; ?>".
+                &#9656 Giao dịch cuối cùng của bạn:<br>
+                &emsp;<?php echo $type; ?>: <?php echo number_format($transaction); ?> VND<br>
+                &emsp;Thời gian: <?php echo $sanitized_time; ?><br>
+                &emsp;<?php echo $row1["remarks"]; ?>.
             </p>
         </div>
     </div>
