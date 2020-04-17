@@ -36,15 +36,15 @@
             </div>
             <div class="flex-container-radio">
                 <div class="container">
-                    <input type="radio" name="gender" value="male" id="male-radio" checked>
+                    <input type="radio" name="gender" value="Nam" id="male-radio" checked>
                     <label id="radio-label" for="male-radio"><span class="radio">Nam</span></label>
                 </div>
                 <div class="container">
-                    <input type="radio" name="gender" value="female" id="female-radio">
+                    <input type="radio" name="gender" value="Nữ" id="female-radio">
                     <label id="radio-label" for="female-radio"><span class="radio">Nữ</span></label>
                 </div>
                 <div class="container">
-                    <input type="radio" name="gender" value="others" id="other-radio">
+                    <input type="radio" name="gender" value="Khác" id="other-radio">
                     <label id="radio-label" for="other-radio"><span class="radio">Khác</span></label>
                 </div>
             </div>
@@ -84,10 +84,15 @@
 
         <div class="flex-container">
             <div class=container>
-                <label>Thành Phố: </label>
+                <label>Chi nhánh ngân hàng: </label>
             </div>
             <div  class=container>
                 <select name="branch">
+                    <option value="delhi" selected="selected">Delhi</option>
+                    <option value="newyork">New York</option>
+                    <option value="paris">Paris</option>
+                    <option value="riyadh">Riyadh</option>
+                    <option value="moscow">Moscow</option>
                 </select>
             </div>
         </div>

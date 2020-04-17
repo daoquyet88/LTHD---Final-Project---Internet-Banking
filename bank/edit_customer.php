@@ -91,9 +91,9 @@
                 <label>Giới tính:
                     <label id="info_label">
                     <?php
-                        if ($gender == "male") {echo "Male";}
-                        elseif ($gender == "female") {echo "Female";}
-                        else {echo "Others";}
+                        if ($gender == "Nam") {echo "Nam";}
+                        elseif ($gender == "Nữ") {echo "Nữ";}
+                        else {echo "Khác";}
                     ?>
                     <label>
                 </label>

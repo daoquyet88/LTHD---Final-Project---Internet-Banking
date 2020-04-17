@@ -177,7 +177,7 @@
                         <td>
                             <?php
                                 $time = strtotime($row["trans_date"]);
-                                $sanitized_time = date("d/m/Y, g:i A", $time);
+                                $sanitized_time = date("d/m/Y, H:i", $time);
                                 echo $sanitized_time;
                              ?>
                         </td>

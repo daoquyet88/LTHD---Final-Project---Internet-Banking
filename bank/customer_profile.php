@@ -88,7 +88,7 @@
                     <?php
                         if ($gender == "Nam") {echo "Nam";}
                         elseif ($gender == "Nữ") {echo "Nữ";}
-                        else {echo "Others";}
+                        else {echo "Khác";}
                     ?>
                     <label>
                 </label>

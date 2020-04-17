@@ -81,7 +81,7 @@ $sql3 = "INSERT INTO customer VALUES(
 $sql4 = "INSERT INTO passbook".$id." VALUES(
             NULL,
             NOW(),
-            'Opening Balance',
+            'Mở tài khoản',
             '0',
             '$o_balance',
             '$o_balance'
@@ -94,45 +94,10 @@ $sql4 = "INSERT INTO passbook".$id." VALUES(
         <div class="flex-item">
             <?php
             if (($conn->query($sql3) === TRUE)) { ?>
-                <p id="info"><?php echo "Customer created successfully !\n"; ?></p>
+                <p id="info"><?php echo "Thêm khách hàng thành công!\n"; ?></p>
         </div>
-
-        <div class="flex-item">
-            <?php
-            if (($conn->query($sql1) === TRUE)) { ?>
-                <p id="info"><?php echo "Passbook created successfully !\n"; ?></p>
             <?php
             } else { ?>
-                <p id="info"><?php
-                echo "Error: " . $sql1 . "<br>" . $conn->error . "<br>"; ?></p>
-            <?php } ?>
-        </div>
-
-        <div class="flex-item">
-            <?php
-            if (($conn->query($sql4) === TRUE)) { ?>
-                <p id="info"><?php echo "Passbook updated successfully !\n"; ?></p>
-            <?php
-            } else { ?>
-                <p id="info"><?php
-                echo "Error: " . $sql4 . "<br>" . $conn->error . "<br>"; ?></p>
-            <?php } ?>
-        </div>
-
-        <div class="flex-item">
-            <?php
-            if (($conn->query($sql2) === TRUE)) { ?>
-                <p id="info"><?php echo "Beneficiary created successfully !\n"; ?></p>
-            <?php
-            } else { ?>
-                <p id="info"><?php
-                echo "Error: " . $sql2 . "<br>" . $conn->error . "<br>"; ?></p>
-            <?php } ?>
-        </div>
-
-            <?php
-            } else { ?>
-        </div>
         <div class="flex-item">
                 <p id="info"><?php
                 echo "Error: " . $sql3 . "<br>" . $conn->error . "<br>"; ?></p>
@@ -141,7 +106,7 @@ $sql4 = "INSERT INTO passbook".$id." VALUES(
         <?php $conn->close(); ?>
 
         <div class="flex-item">
-            <a href="./customer_add.php" class="button">Add Again</a>
+            <a href="./customer_add.php" class="button">Thêm lại</a>
         </div>
 
     </div>

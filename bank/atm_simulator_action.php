@@ -34,7 +34,7 @@
             $sql1 = "INSERT INTO passbook".$id." VALUES(
                         NULL,
                         NOW(),
-                        'Cash Deposit',
+                        'Tiền đặt cọc',
                         '0',
                         '$amt',
                         '$final_balance'
@@ -53,7 +53,7 @@
                 $sql1 = "INSERT INTO passbook".$id." VALUES(
                             NULL,
                             NOW(),
-                            'Cash to Self',
+                            'Nạp tiền',
                             '$amt',
                             '0',
                             '$final_balance'

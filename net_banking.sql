@@ -119,15 +119,15 @@ CREATE TABLE `beneficiary4` (
 
 CREATE TABLE `customer` (
   `cust_id` int(11) NOT NULL,
-  `first_name` varchar(30) DEFAULT NULL,
-  `last_name` varchar(30) DEFAULT NULL,
-  `gender` varchar(10) DEFAULT NULL,
+  `first_name` nvarchar(30) DEFAULT NULL,
+  `last_name` nvarchar(30) DEFAULT NULL,
+  `gender` nvarchar(10) DEFAULT NULL,
   `dob` date DEFAULT NULL,
   `aadhar_no` int(11) DEFAULT NULL,
   `email` varchar(30) DEFAULT NULL,
   `phone_no` varchar(20) DEFAULT NULL,
-  `address` varchar(255) DEFAULT NULL,
-  `branch` varchar(30) DEFAULT NULL,
+  `address` nvarchar(255) DEFAULT NULL,
+  `branch` nvarchar(30) DEFAULT NULL,
   `account_no` int(11) DEFAULT NULL,
   `pin` int(4) DEFAULT NULL,
   `uname` varchar(30) DEFAULT NULL,
@@ -139,10 +139,10 @@ CREATE TABLE `customer` (
 --
 
 INSERT INTO `customer` (`cust_id`, `first_name`, `last_name`, `gender`, `dob`, `aadhar_no`, `email`, `phone_no`, `address`, `branch`, `account_no`, `pin`, `uname`, `pwd`) VALUES
-(1, 'Phan Van', 'Quan', 'male', '1993-10-01', 123456789, 'phanvanquanit@gmail.com', '+91 8918722499', 'HCM city', 'HCM', 1122334455, 1234, 'phanvanquan', 'quan123'),
-(2, 'Nguyen The', 'Loi', 'male', '1994-10-11', 987654321, 'ali.salman@gmail.com', '+966 895432167', 'HCM', 'HCM', 1133557788, 1234, 'nguyentheloi', 'loi123'),
-(3, 'Dang Ngoc', 'Vu', 'male', '1995-02-03', 125656765, 'tusharpkt@gmail.com', '+334 123456987', 'HCM', 'HCM', 1122338457, 1357, 'dangngocvu', 'vu123'),
-(4, 'qqqq', 'qqqqqqq', 'male', '1993-10-01', 0, 'qqqq.salman@gmail.com', '00000000000000000', NULL, 'HCM', 0, 0, 'qqqq', 'q123');
+(1, N'Phan Văn', N'Quân', N'Nam', '1993-10-01', 123456789, 'phanvanquanit@gmail.com', '+91 8918722499', N'HCM', N'newyork', 1122334455, 1234, 'phanvanquan', 'quan123'),
+(2, N'Nguyễn Thế', N'Lợi', N'Nam', '1994-10-11', 987654321, 'ngtheloi.2710@gmail.com', '+966 895432167', N'HCM', N'newyork', 1133557788, 1234, 'loi', '123'),
+(3, N'Đặng Ngọc', N'Vũ', N'Nam', '1995-02-03', 125656765, 'tusharpkt@gmail.com', '+334 123456987', N'HCM', N'paris', 1122338457, 1357, 'dangngocvu', 'vu123'),
+(4, N'Nguyễn', N'Linh', N'Nữ', '1993-10-01', 015497845, 'linh@gmail.com', '0123456789', N'Ha Noi', N'paris', 1498721786, 1234, 'linh', '123');
 
 -- --------------------------------------------------------
 
@@ -210,7 +210,7 @@ INSERT INTO `news_body` (`id`, `body`) VALUES
 CREATE TABLE `passbook1` (
   `trans_id` int(11) NOT NULL,
   `trans_date` datetime DEFAULT NULL,
-  `remarks` varchar(255) DEFAULT NULL,
+  `remarks` nvarchar(255) DEFAULT NULL,
   `debit` int(11) DEFAULT NULL,
   `credit` int(11) DEFAULT NULL,
   `balance` int(11) DEFAULT NULL
@@ -221,21 +221,21 @@ CREATE TABLE `passbook1` (
 --
 
 INSERT INTO `passbook1` (`trans_id`, `trans_date`, `remarks`, `debit`, `credit`, `balance`) VALUES
-(1, '2017-09-06 22:18:36', 'Opening Balance', 0, 10000, 10000),
-(2, '2017-10-02 18:49:26', 'Received from: Salman Ali, AC/No: 1133557799', 0, 20000, 30000),
-(3, '2017-10-02 21:02:32', 'Sent to: Jon Snow, AC/No: 1133557736', 10000, 0, 20000),
-(4, '2017-10-05 20:11:33', 'Received from: Salman Ali, AC/No: 1133557799', 0, 69000, 89000),
-(5, '2017-11-19 17:00:35', 'Cash Deposit', 0, 2000000, 2089000),
-(6, '2017-11-19 17:01:09', 'Sent to: Jon Snow, AC/No: 1233556739', 15000, 0, 2074000),
-(7, '2017-11-19 17:02:29', 'Cash to Self', 25000, 0, 2049000),
-(8, '2017-11-19 17:03:45', 'Sent to: Md Salman Ali, AC/No: 1133557799', 50000, 0, 1999000),
-(9, '2017-11-19 17:26:45', 'Received from: Md Salman Ali, AC/No: 1133557788', 0, 6123, 2005123),
-(10, '2020-04-10 07:14:36', 'Sent to: Jon Snow, AC/No: 1233556739', 12, 0, 2005111),
-(11, '2020-04-10 07:15:09', 'Sent to: Jon Snow, AC/No: 1233556739', 12, 0, 2005099),
-(12, '2020-04-10 07:18:33', 'Sent to: Jon Snow, AC/No: 1233556739', 10000, 0, 1995099),
-(13, '2020-04-10 07:24:56', 'Cash to Self', 10000, 0, 1985099),
-(14, '2020-04-10 07:26:09', 'Cash to Self', 10000, 0, 1975099),
-(15, '2020-04-10 08:28:39', 'Sent to: Nguyen The Loi, AC/No: 1133557788', 200000, 0, 1775099);
+(1, '2017-09-06 22:18:36', N'Mở tài khoản', 0, 10000, 10000),
+(2, '2017-10-02 18:49:26', N'Nhận từ: Salman Ali, Số tài khoản: 1133557799', 0, 20000, 30000),
+(3, '2017-10-02 21:02:32', N'Gửi tới: Jon Snow, Số tài khoản: 1133557736', 10000, 0, 20000),
+(4, '2017-10-05 20:11:33', N'Nhận từ: Salman Ali, Số tài khoản: 1133557799', 0, 69000, 89000),
+(5, '2017-11-19 17:00:35', N'Tiền đặt cọc', 0, 2000000, 2089000),
+(6, '2017-11-19 17:01:09', N'Gửi tới: Jon Snow, Số tài khoản: 1233556739', 15000, 0, 2074000),
+(7, '2017-11-19 17:02:29', N'Nạp tiền', 25000, 0, 2049000),
+(8, '2017-11-19 17:03:45', N'Gửi tới: Md Salman Ali, Số tài khoản: 1133557799', 50000, 0, 1999000),
+(9, '2017-11-19 17:26:45', N'Nhận từ: Md Salman Ali, Số tài khoản: 1133557788', 0, 6123, 2005123),
+(10, '2020-04-10 07:14:36', N'Gửi tới: Jon Snow, Số tài khoản: 1233556739', 12, 0, 2005111),
+(11, '2020-04-10 07:15:09', N'Gửi tới: Jon Snow, Số tài khoản: 1233556739', 12, 0, 2005099),
+(12, '2020-04-10 07:18:33', N'Gửi tới: Jon Snow, Số tài khoản: 1233556739', 10000, 0, 1995099),
+(13, '2020-04-10 07:24:56', N'Nạp tiền', 10000, 0, 1985099),
+(14, '2020-04-10 07:26:09', N'Nạp tiền', 10000, 0, 1975099),
+(15, '2020-04-10 08:28:39', N'Gửi tới: Nguyễn Thế Lợi, Số tài khoản: 1133557788', 200000, 0, 1775099);
 
 -- --------------------------------------------------------
 
@@ -246,7 +246,7 @@ INSERT INTO `passbook1` (`trans_id`, `trans_date`, `remarks`, `debit`, `credit`,
 CREATE TABLE `passbook2` (
   `trans_id` int(11) NOT NULL,
   `trans_date` datetime DEFAULT NULL,
-  `remarks` varchar(255) DEFAULT NULL,
+  `remarks` nvarchar(255) DEFAULT NULL,
   `debit` int(11) DEFAULT NULL,
   `credit` int(11) DEFAULT NULL,
   `balance` int(11) DEFAULT NULL
@@ -257,22 +257,22 @@ CREATE TABLE `passbook2` (
 --
 
 INSERT INTO `passbook2` (`trans_id`, `trans_date`, `remarks`, `debit`, `credit`, `balance`) VALUES
-(1, '2017-09-06 22:21:54', 'Opening Balance', 0, 20000, 20000),
-(2, '2017-09-10 15:35:39', 'Cash to Self', 2000, 0, 18000),
-(3, '2017-09-26 17:51:47', 'Cash to Self', 2500, 0, 15500),
-(4, '2017-09-26 17:52:31', 'Cash Deposit', 0, 3500, 19000),
-(5, '2017-09-26 20:42:20', 'Cash Deposit', 0, 2500, 21500),
-(6, '2017-09-26 20:44:17', 'Cash to Self', 1002, 0, 20498),
-(7, '2017-09-29 19:38:04', 'Cash Deposit', 0, 20000, 40498),
-(8, '2017-09-29 19:38:49', 'Cash to Self', 2000, 0, 38498),
-(9, '2017-09-30 21:38:56', 'Cash Deposit', 0, 10000, 48498),
-(10, '2017-10-02 18:49:26', 'Sent to: Nafees Zakee, AC/No: 1122334455', 20000, 0, 28498),
-(11, '2017-10-03 00:18:44', 'Cash Deposit', 0, 500000, 528498),
-(12, '2017-10-05 20:11:33', 'Sent to: Nafees Zakee, AC/No: 1122334455', 69000, 0, 459498),
-(13, '2017-10-30 16:30:45', 'Cash Deposit', 0, 10000, 469498),
-(14, '2017-11-19 17:03:45', 'Received from: Nafees Zakee, AC/No: 1122334455', 0, 50000, 519498),
-(15, '2017-11-19 17:26:45', 'Sent to: Nafees Zakee, AC/No: 1122334455', 6123, 0, 513375),
-(16, '2020-04-10 08:28:39', 'Received from: Phan Van Quan, AC/No: 1122334455', 0, 200000, 713375);
+(1, '2017-09-06 22:21:54', N'Mở tài khoản', 0, 20000, 20000),
+(2, '2017-09-10 15:35:39', N'Nạp tiền', 2000, 0, 18000),
+(3, '2017-09-26 17:51:47', N'Nạp tiền', 2500, 0, 15500),
+(4, '2017-09-26 17:52:31', N'Tiền đặt cọc', 0, 3500, 19000),
+(5, '2017-09-26 20:42:20', N'Tiền đặt cọc', 0, 2500, 21500),
+(6, '2017-09-26 20:44:17', N'Nạp tiền', 1002, 0, 20498),
+(7, '2017-09-29 19:38:04', N'Tiền đặt cọc', 0, 20000, 40498),
+(8, '2017-09-29 19:38:49', N'Nạp tiền', 2000, 0, 38498),
+(9, '2017-09-30 21:38:56', N'Tiền đặt cọc', 0, 10000, 48498),
+(10, '2017-10-02 18:49:26', N'Gửi tới: Nafees Zakee, Số tài khoản: 1122334455', 20000, 0, 28498),
+(11, '2017-10-03 00:18:44', N'Tiền đặt cọc', 0, 500000, 528498),
+(12, '2017-10-05 20:11:33', N'Gửi tới: Nafees Zakee, Số tài khoản: 1122334455', 69000, 0, 459498),
+(13, '2017-10-30 16:30:45', N'Tiền đặt cọc', 0, 10000, 469498),
+(14, '2017-11-19 17:03:45', N'Nhận từ: Nafees Zakee, Số tài khoản: 1122334455', 0, 50000, 519498),
+(15, '2017-11-19 17:26:45', N'Gửi tới: Nafees Zakee, Số tài khoản: 1122334455', 6123, 0, 513375),
+(16, '2020-04-10 08:28:39', N'Nhận từ: Phan Văn Quân, Số tài khoản: 1122334455', 0, 200000, 713375);
 
 -- --------------------------------------------------------
 
@@ -283,7 +283,7 @@ INSERT INTO `passbook2` (`trans_id`, `trans_date`, `remarks`, `debit`, `credit`,
 CREATE TABLE `passbook3` (
   `trans_id` int(11) NOT NULL,
   `trans_date` datetime DEFAULT NULL,
-  `remarks` varchar(255) DEFAULT NULL,
+  `remarks` nvarchar(255) DEFAULT NULL,
   `debit` int(11) DEFAULT NULL,
   `credit` int(11) DEFAULT NULL,
   `balance` int(11) DEFAULT NULL
@@ -294,15 +294,15 @@ CREATE TABLE `passbook3` (
 --
 
 INSERT INTO `passbook3` (`trans_id`, `trans_date`, `remarks`, `debit`, `credit`, `balance`) VALUES
-(1, '2017-09-26 18:23:03', 'Opening Balance', 0, 50000, 50000),
-(2, '2017-09-26 18:42:41', 'Cash Deposit', 0, 123456, 173456),
-(3, '2017-09-26 18:42:52', 'Cash to Self', 5698, 0, 167758),
-(4, '2017-09-26 18:43:05', 'Cash to Self', 9658, 0, 158100),
-(5, '2017-09-26 18:43:23', 'Cash to Self', 1569, 0, 156531),
-(6, '2017-09-26 18:43:32', 'Cash to Self', 12369, 0, 144162),
-(7, '2017-09-26 18:43:53', 'Cash to Self', 100000, 0, 44162),
-(8, '2017-09-26 18:44:14', 'Cash Deposit', 0, 200000, 244162),
-(9, '2017-09-29 19:27:10', 'Cash to Self', 10000, 0, 234162);
+(1, '2017-09-26 18:23:03', N'Mở tài khoản', 0, 50000, 50000),
+(2, '2017-09-26 18:42:41', N'Tiền đặt cọc', 0, 123456, 173456),
+(3, '2017-09-26 18:42:52', N'Nạp tiền', 5698, 0, 167758),
+(4, '2017-09-26 18:43:05', N'Nạp tiền', 9658, 0, 158100),
+(5, '2017-09-26 18:43:23', N'Nạp tiền', 1569, 0, 156531),
+(6, '2017-09-26 18:43:32', N'Nạp tiền', 12369, 0, 144162),
+(7, '2017-09-26 18:43:53', N'Nạp tiền', 100000, 0, 44162),
+(8, '2017-09-26 18:44:14', N'Tiền đặt cọc', 0, 200000, 244162),
+(9, '2017-09-29 19:27:10', N'Nạp tiền', 10000, 0, 234162);
 
 -- --------------------------------------------------------
 
@@ -313,7 +313,7 @@ INSERT INTO `passbook3` (`trans_id`, `trans_date`, `remarks`, `debit`, `credit`,
 CREATE TABLE `passbook4` (
   `trans_id` int(11) NOT NULL,
   `trans_date` datetime DEFAULT NULL,
-  `remarks` varchar(255) DEFAULT NULL,
+  `remarks` nvarchar(255) DEFAULT NULL,
   `debit` int(11) DEFAULT NULL,
   `credit` int(11) DEFAULT NULL,
   `balance` int(11) DEFAULT NULL
@@ -324,18 +324,18 @@ CREATE TABLE `passbook4` (
 --
 
 INSERT INTO `passbook4` (`trans_id`, `trans_date`, `remarks`, `debit`, `credit`, `balance`) VALUES
-(1, '2017-09-26 18:32:59', 'Opening Balance', 0, 20000, 20000),
-(2, '2017-09-26 18:34:54', 'Cash to Self', 10000, 0, 10000),
-(3, '2017-09-26 18:35:08', 'Cash to Self', 3659, 0, 6341),
-(4, '2017-09-26 18:35:20', 'Cash Deposit', 0, 69874, 76215),
-(5, '2017-09-26 18:35:35', 'Cash Deposit', 0, 89000, 165215),
-(6, '2017-09-26 18:35:55', 'Cash to Self', 10000, 0, 155215),
-(7, '2017-09-26 19:29:49', 'Cash to Self', 1236, 0, 153979),
-(8, '2017-10-02 21:02:32', 'Received from: Nafees Zakee, AC/No: 1122334455', 0, 10000, 163979),
-(9, '2017-11-19 17:01:09', 'Received from: Nafees Zakee, AC/No: 1122334455', 0, 15000, 178979),
-(10, '2020-04-10 07:14:36', 'Received from: Phan Van Quan, AC/No: 1122334455', 0, 12, 178991),
-(11, '2020-04-10 07:15:09', 'Received from: Phan Van Quan, AC/No: 1122334455', 0, 12, 179003),
-(12, '2020-04-10 07:18:33', 'Received from: Phan Van Quan, AC/No: 1122334455', 0, 10000, 189003);
+(1, '2017-09-26 18:32:59', N'Mở tài khoản', 0, 20000, 20000),
+(2, '2017-09-26 18:34:54', N'Nạp tiền', 10000, 0, 10000),
+(3, '2017-09-26 18:35:08', N'Nạp tiền', 3659, 0, 6341),
+(4, '2017-09-26 18:35:20', N'Tiền đặt cọc', 0, 69874, 76215),
+(5, '2017-09-26 18:35:35', N'Tiền đặt cọc', 0, 89000, 165215),
+(6, '2017-09-26 18:35:55', N'Nạp tiền', 10000, 0, 155215),
+(7, '2017-09-26 19:29:49', N'Nạp tiền', 1236, 0, 153979),
+(8, '2017-10-02 21:02:32', N'Nhận từ: Nafees Zakee, Số tài khoản: 1122334455', 0, 10000, 163979),
+(9, '2017-11-19 17:01:09', N'Nhận từ: Nafees Zakee, Số tài khoản: 1122334455', 0, 15000, 178979),
+(10, '2020-04-10 07:14:36', N'Nhận từ: Phan Văn Quân, Số tài khoản: 1122334455', 0, 12, 178991),
+(11, '2020-04-10 07:15:09', N'Nhận từ: Phan Văn Quân, Số tài khoản: 1122334455', 0, 12, 179003),
+(12, '2020-04-10 07:18:33', N'Nhận từ: Phan Văn Quân, Số tài khoản: 1122334455', 0, 10000, 189003);
 
 --
 -- Chỉ mục cho các bảng đã đổ

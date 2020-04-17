@@ -47,7 +47,7 @@
             $sql3 = "INSERT INTO passbook".$sender_id." VALUES(
                         NULL,
                         NOW(),
-                        'Sent to: ".$row5["first_name"]." ".$row5["last_name"].", AC/No: ".$row5["account_no"]."',
+                        'Gửi tới: ".$row5["first_name"]." ".$row5["last_name"].", Số tài khoản: ".$row5["account_no"]."',
                         '$amt',
                         '0',
                         '$updated_sender_balance'
@@ -56,7 +56,7 @@
             $sql4 = "INSERT INTO passbook".$receiver_id." VALUES(
                         NULL,
                         NOW(),
-                        'Received from: ".$row0["first_name"]." ".$row0["last_name"].", AC/No: ".$row0["account_no"]."',
+                        'Nhận từ: ".$row0["first_name"]." ".$row0["last_name"].", Số tài khoản: ".$row0["account_no"]."',
                         '0',
                         '$amt',
                         '$updated_receiver_balance'
