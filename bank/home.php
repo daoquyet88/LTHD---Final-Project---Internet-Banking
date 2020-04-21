@@ -1,27 +1,4 @@
 <?php
-if(isset($_POST['submit'])){
-   $cust_uname;
-   $captcha;
-   if(isset($_POST['cust_uname'])){
-      $cust_uname = $_POST['cust_uname'];
-   }
-   if(isset($_POST['g-recaptcha-response'])){
-      $captcha = $_POST['g-recaptcha-response'];
-   }
-   if(!$captcha){
-      echo '<h2>Hay xac nhan CAPTCHA</h2>';
-   }else{
-      $response = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=6LfJDeoUAAAAAEx_BIbMR75oMfxJMf8kA5EuS15L&response=".$captcha."&remoteip=".$_SERVER['REMOTE_ADDR']);
-      if($response.success == false){
-         echo '<h2>SPAM!</h2>';
-      }else{
-         echo '<h2>'.$name.' Khong phai robot :)</h2>';
-      }
-   }
-}
-?>
-
-<?php
     include "header.php";
     include "navbar.php";
 
@@ -49,7 +26,7 @@ if(isset($_POST['submit'])){
 
         <div class="flex-container">
             <div class="flex-item-1">
-                <form action="customer_login_action.php" method="post">
+                <form action="customer_login_action.php" method="post" onsubmit="return CheckingCaptcha()">
                     <div class="flex-item-login" style="text-align: center;">
                         <h2>Chào mừng khách hàng</h2>
                     </div>
@@ -68,6 +45,17 @@ if(isset($_POST['submit'])){
                         <button type="submit">Đăng nhập</button>
                     </div>
                 </form>
+
+                <script type="text/javascript">
+                    function CheckingCaptcha() {
+                        if(grecaptcha && grecaptcha.getResponse().length > 0) {
+                            return true;
+                        } else {
+                            alert('Bạn chưa xác minh recaptcha.');
+                            return false;
+                        }
+                    }
+                </script>
             </div>
         </div>
     </div>
