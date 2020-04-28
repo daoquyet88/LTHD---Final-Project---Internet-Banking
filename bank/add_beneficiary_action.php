@@ -70,7 +70,7 @@
         </div>
 
         <div class="flex-item">
-            <a href="./beneficiary.php" class="button">Trở vềk</a>
+            <a href="./beneficiary.php" class="button">Trở về</a>
         </div>
     </div>
 
