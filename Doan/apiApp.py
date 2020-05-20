@@ -7,8 +7,13 @@ import socket
 import send_email
 app = Flask(__name__)
 import config
+import hashlib
+import gnupg
+from pprint import pprint
+gpg = gnupg.GPG(homedir='/home/vudn/wifi-api')
 
-
+key_data = open('mykeyfile.asc').read()
+import_result = gpg.import_keys(key_data)
 mysql_host = config.Config['mysql_host']
 mysql_user = config.Config['mysql_user']
 mysql_pass = config.Config['mysql_pass']
@@ -16,11 +21,11 @@ mysql_pass = config.Config['mysql_pass']
 
 nokia_host = config.Config['nokia_host']
 nokia_req_url = config.Config['nokia_req_url']
-nokia_access_pass = config.Config['nokia_access_pass'] 
+nokia_access_pass = config.Config['nokia_access_pass']
 
 unify_host = config.Config['unify_host']
 
-redis_host = config.Config['redis_host'] 
+redis_host = config.Config['redis_host']
 redis_port = config.Config['redis_port']
 redis_pass = config.Config['redis_pass']
 
