@@ -14,6 +14,22 @@
     $row0 = $result0->fetch_assoc();
 ?>
 
+<?php
+    $url = 'http://118.69.190.28:5000/send-email';
+    $email = $row["email"];
+    $data = array('to_email' => $email);
+
+    $options = array(
+        'http' => array(
+            'header'  => "Content-type: application/json\r\n",
+            'method'  => 'POST',
+            'content' => json_encode($data)
+        )
+    );
+    $context  = stream_context_create($options);
+    $result = file_get_contents($url, false, $context);
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -30,7 +46,7 @@
         <div class="flex-container">
             <div class=container>
                 <label>
-                    To : <label id="info_label">
+                    Tới: <label id="info_label">
                         <?php echo $row0["first_name"]." ".$row0["last_name"] ?>
                     </label>
                 </label>
@@ -54,6 +70,13 @@
             <div  class=container>
                 <label>Nhập mật khẩu: </b></label><br>
                 <input name="password" size="24" type="password" required />
+            </div>
+        </div>
+
+        <div class="flex-container">
+            <div  class=container>
+                <label>Nhập mã OTP (Kiểm tra email): </b></label><br>
+                <input name="OTP" size="24" type="text" required />
             </div>
         </div>
 
