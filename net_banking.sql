@@ -131,18 +131,19 @@ CREATE TABLE `customer` (
   `account_no` int(11) DEFAULT NULL,
   `pin` int(4) DEFAULT NULL,
   `uname` varchar(30) DEFAULT NULL,
-  `pwd` varchar(30) DEFAULT NULL
+  `pwd` varchar(30) DEFAULT NULL,
+  `acc_status` int(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Đang đổ dữ liệu cho bảng `customer`
 --
 
-INSERT INTO `customer` (`cust_id`, `first_name`, `last_name`, `gender`, `dob`, `aadhar_no`, `email`, `phone_no`, `address`, `branch`, `account_no`, `pin`, `uname`, `pwd`) VALUES
-(1, N'Phan Văn', N'Quân', N'Nam', '1993-10-01', 123456789, 'phanvanquanit@gmail.com', '+91 8918722499', N'HCM', N'newyork', 1122334455, 1234, 'phanvanquan', 'quan123'),
-(2, N'Nguyễn Thế', N'Lợi', N'Nam', '1994-10-11', 987654321, 'ngtheloi.2710@gmail.com', '+966 895432167', N'HCM', N'newyork', 1133557788, 1234, 'loi', '123'),
-(3, N'Đặng Ngọc', N'Vũ', N'Nam', '1995-02-03', 125656765, 'tusharpkt@gmail.com', '+334 123456987', N'HCM', N'paris', 1122338457, 1357, 'dangngocvu', 'vu123'),
-(4, N'Nguyễn', N'Linh', N'Nữ', '1993-10-01', 015497845, 'linh@gmail.com', '0123456789', N'Ha Noi', N'paris', 1498721786, 1234, 'linh', '123');
+INSERT INTO `customer` (`cust_id`, `first_name`, `last_name`, `gender`, `dob`, `aadhar_no`, `email`, `phone_no`, `address`, `branch`, `account_no`, `pin`, `uname`, `pwd`, `acc_status`) VALUES
+(1, N'Phan Văn', N'Quân', N'Nam', '1993-10-01', 123456789, 'phanvanquanit@gmail.com', '+91 8918722499', N'HCM', N'newyork', 1122334455, 1234, 'phanvanquan', 'quan123', 1),
+(2, N'Nguyễn Thế', N'Lợi', N'Nam', '1994-10-11', 987654321, 'ngtheloi.2710@gmail.com', '+966 895432167', N'HCM', N'newyork', 1133557788, 1234, 'loi', '123', 1),
+(3, N'Đặng Ngọc', N'Vũ', N'Nam', '1995-02-03', 125656765, 'tusharpkt@gmail.com', '+334 123456987', N'HCM', N'paris', 1122338457, 1357, 'dangngocvu', 'vu123', 1),
+(4, N'Nguyễn', N'Linh', N'Nữ', '1993-10-01', 015497845, 'linh@gmail.com', '0123456789', N'Ha Noi', N'paris', 1498721786, 1234, 'linh', '123', 1);
 
 -- --------------------------------------------------------
 

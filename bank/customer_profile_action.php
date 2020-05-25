@@ -15,10 +15,12 @@
     $email = mysqli_real_escape_string($conn, $_POST["email"]);
     $address = mysqli_real_escape_string($conn, $_POST["address"]);
     $cus_uname = mysqli_real_escape_string($conn, $_POST["cus_uname"]);
+    $acc_status = mysqli_real_escape_string($conn, $_POST["acc_status"]);
 
     $sql0 = "UPDATE customer SET email = '$email',
                                  address = '$address',
-                                 uname = '$cus_uname'
+                                 uname = '$cus_uname',
+                                 acc_status = '$acc_status'
                             WHERE cust_id=".$_SESSION['loggedIn_cust_id'];;
 ?>
 

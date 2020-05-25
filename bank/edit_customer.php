@@ -39,6 +39,7 @@
             $pin = $row["pin"];
             $cus_uname = $row["uname"];
             $cus_pwd = $row["pwd"];
+            $acc_status = $row["acc_status"];
         }
     }
 
@@ -169,6 +170,33 @@
             <div  class=container>
                 <label>Mật khẩu: </b></label><br>
                 <input name="cus_pwd" size="30" type="text" value="<?php echo $cus_pwd ?>" required />
+            </div>
+        </div>
+
+        <div class="flex-container">
+            <div class=container>
+                <label>Trạng thái tài khoản: </label>
+            </div>
+            <div class="flex-container-radio">
+                <?php if ($acc_status == 1) { ?>
+                    <div class="container">
+                        <input type="radio" name="acc_status" value="1" id="active" checked>
+                        <label id="radio-label" for="active"><span class="radio">Hoạt động</span></label>
+                    </div>
+                    <div class="container">
+                        <input type="radio" name="acc_status" value="0" id="inactive">
+                        <label id="radio-label" for="inactive"><span class="radio">Đóng</span></label>
+                    </div>
+                <?php } else { ?>
+                    <div class="container">
+                        <input type="radio" name="acc_status" value="1" id="active">
+                        <label id="radio-label" for="active"><span class="radio">Hoạt động</span></label>
+                    </div>
+                    <div class="container">
+                        <input type="radio" name="acc_status" value="0" id="inactive" checked>
+                        <label id="radio-label" for="inactive"><span class="radio">Đóng</span></label>
+                    </div>
+                <?php } ?>
             </div>
         </div>
 

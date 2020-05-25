@@ -28,6 +28,7 @@
     $pin = mysqli_real_escape_string($conn, $_POST["pin"]);
     $cus_uname = mysqli_real_escape_string($conn, $_POST["cus_uname"]);
     $cus_pwd = mysqli_real_escape_string($conn, $_POST["cus_pwd"]);
+    $acc_status = mysqli_real_escape_string($conn, $_POST["acc_status"]);
 
     $sql0 = "UPDATE customer SET first_name = '$fname',
                                  last_name = '$lname',
@@ -40,7 +41,8 @@
                                  account_no = '$acno',
                                  pin = '$pin',
                                  uname = '$cus_uname',
-                                 pwd = '$cus_pwd'
+                                 pwd = '$cus_pwd',
+                                 acc_status = '$acc_status'
                             WHERE cust_id=".$_SESSION['cust_id'];
 
 ?>

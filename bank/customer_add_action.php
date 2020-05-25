@@ -29,6 +29,7 @@ $o_balance = mysqli_real_escape_string($conn, $_POST["o_balance"]);
 $pin = mysqli_real_escape_string($conn, $_POST["pin"]);
 $cus_uname = mysqli_real_escape_string($conn, $_POST["cus_uname"]);
 $cus_pwd = mysqli_real_escape_string($conn, $_POST["cus_pwd"]);
+$acc_status = mysqli_real_escape_string($conn, "1");
 
 $sql0 = "SELECT MAX(cust_id) FROM customer";
 $result = $conn->query($sql0);
@@ -75,7 +76,8 @@ $sql3 = "INSERT INTO customer VALUES(
             '$acno',
             '$pin',
             '$cus_uname',
-            '$cus_pwd'
+            '$cus_pwd',
+            '$acc_status'
         )";
 
 $sql4 = "INSERT INTO passbook".$id." VALUES(

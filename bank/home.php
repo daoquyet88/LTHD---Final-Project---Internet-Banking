@@ -5,6 +5,9 @@
     if (isset($_GET['loginFailed'])) {
         $message = "Thông tin không hợp lệ! Vui lòng thử lại.";
         echo "<script type='text/javascript'>alert('$message');</script>";
+    } else if (isset($_GET['closeAccount'])) {
+        $message = "Bạn đã đóng tài khoản ngân hàng. Vui lòng liên hệ nhân viên ngân hàng để mở lại tài khoản.";
+        echo "<script type='text/javascript'>alert('$message');</script>";
     }
 ?>
 
