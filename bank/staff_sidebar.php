@@ -2,13 +2,13 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/admin_sidebar_style.css">
+    <link rel="stylesheet" href="css/staff_sidebar_style.css">
 </head>
 
 <body>
     <div class="sidenav" id="theSideNav">
         <a href="javascript:void(0)" id="closebtn" onclick="closeNav()">&times;</a>
-        <a href="./admin_home.php">Trang chủ</a>
+        <a href="./staff_home.php">Trang chủ</a>
         <a id="label">Khách hàng</a>
         <a href="./customer_add.php">Thêm khách hàng</a>
         <a href="./manage_customers.php">Quản lý khách hàng</a>

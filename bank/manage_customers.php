@@ -3,7 +3,7 @@
     include "connect.php";
     include "header.php";
     include "user_navbar.php";
-    include "admin_sidebar.php";
+    include "staff_sidebar.php";
     include "session_timeout.php";
 
     if (isset($_POST['submit'])) {
