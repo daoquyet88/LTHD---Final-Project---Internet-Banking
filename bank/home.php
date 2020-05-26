@@ -42,6 +42,17 @@
                         <input type="password" name="cust_psw" placeholder=" Mật khẩu" required>
                     </div>
 
+                    <div class="flex-item">
+                        <div class="container-radio">
+                            <input type="radio" name="loginOption" value="kh" id="kh" checked>
+                            <label id="radio-label" for="kh"><span class="radio">Khách hàng</span></label>
+                        </div>
+                        <div class="container-radio">
+                            <input type="radio" name="loginOption" value="nv" id="nv">
+                            <label id="radio-label" for="nv"><span class="radio">Nhân viên</span></label>
+                        </div>
+                    </div>
+
                     <div class="g-recaptcha" data-sitekey='6LfJDeoUAAAAAEssrVanyIBmz_0IHPwq1ldGsvmn' style="display: flex; justify-content: center;"></div>
 
                     <div class="flex-item" style="display: flex; justify-content: center;">

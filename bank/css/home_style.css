@@ -124,3 +124,35 @@ button {
 button:hover {
     opacity: 0.8;
 }
+
+.container-radio {
+    margin: 10px 20px 10px 20px;
+    float: left;
+    display: inline-block;
+}
+
+label {
+    display: block;
+    float: left;
+    color: black;
+    font-family: OpenSans-Bold;
+    font-size: 20px;
+}
+
+input[type=radio] {
+    display: none;
+    background-color: white;
+    float: left;
+    padding: 1px 1px;
+}
+
+label[id="radio-label"] {
+	background: url("../images/radio_button_unchecked.png") left top no-repeat;
+	display: block;
+	min-height: 25px;
+	padding-left: 35px;
+}
+
+input[type=radio]:checked + label {
+	background: url("../images/radio_button_checked.png") left top no-repeat;
+}
