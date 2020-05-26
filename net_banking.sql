@@ -338,9 +338,45 @@ INSERT INTO `passbook4` (`trans_id`, `trans_date`, `remarks`, `debit`, `credit`,
 (11, '2020-04-10 07:15:09', N'Nhận từ: Phan Văn Quân, Số tài khoản: 1122334455', 0, 12, 179003),
 (12, '2020-04-10 07:18:33', N'Nhận từ: Phan Văn Quân, Số tài khoản: 1122334455', 0, 10000, 189003);
 
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `staff`
+--
+
+CREATE TABLE `staff` (
+  `cust_id` int(11) NOT NULL,
+  `first_name` varchar(30) CHARACTER SET utf8 DEFAULT NULL,
+  `last_name` varchar(30) CHARACTER SET utf8 DEFAULT NULL,
+  `gender` varchar(10) CHARACTER SET utf8 DEFAULT NULL,
+  `dob` date DEFAULT NULL,
+  `email` varchar(30) DEFAULT NULL,
+  `phone_no` varchar(20) DEFAULT NULL,
+  `address` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
+  `uname` varchar(30) DEFAULT NULL,
+  `pwd` varchar(30) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Đang đổ dữ liệu cho bảng `staff`
+--
+
+INSERT INTO `staff` (`cust_id`, `first_name`, `last_name`, `gender`, `dob`, `email`, `phone_no`, `address`, `uname`, `pwd`) VALUES
+(1, 'Nguyễn', 'Ngọc', 'Nam', '1993-10-01', 'ngoc@lqv.com', '+84 918722499', 'HCM', 'nv1', '123'),
+(2, 'Quách', 'Tĩnh', 'Nam', '1994-10-11', 'tinh@lqv.com', '+84 954321679', 'HCM', 'nv2', '123');
+
 --
 -- Chỉ mục cho các bảng đã đổ
 --
+
+--
+-- Chỉ mục cho bảng `staff`
+--
+ALTER TABLE `staff`
+  ADD PRIMARY KEY (`cust_id`),
+  ADD UNIQUE KEY `email` (`email`),
+  ADD UNIQUE KEY `phone_no` (`phone_no`),
+  ADD UNIQUE KEY `uname` (`uname`);
 
 --
 -- Chỉ mục cho bảng `admin`
