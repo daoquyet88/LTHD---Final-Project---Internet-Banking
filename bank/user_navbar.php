@@ -13,7 +13,7 @@
                 &#9776;
             </a>
             <a id="logout" href="./logout_action.php" style="border-top-left-radius: 3px;" 
-                    onclick="return confirm('Are you sure?')">Đăng xuất</a>
+                    onclick="return confirm('Bạn chắc chứ?')">Đăng xuất</a>
         </div>
     </div>
 
