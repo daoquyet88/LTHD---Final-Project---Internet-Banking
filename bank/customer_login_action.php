@@ -14,19 +14,18 @@
     $result = $conn->query($sql0);
     $row = $result->fetch_assoc();
 
-    if ($row["acc_status"] == "1") {
-        if (($result->num_rows) > 0) {
+    if (($result->num_rows) > 0) {
+        if ($row["acc_status"] == "1") {
             $_SESSION['loggedIn_cust_id'] = $row["cust_id"];
             $_SESSION['isCustValid'] = true;
             $_SESSION['LAST_ACTIVITY'] = time();
             header("location:customer_home.php");
-        }
-        else {
+        } else {
             session_destroy();
-            die(header("location:home.php?loginFailed=true"));
+            die(header("location:home.php?closeAccount=true"));
         }
     } else {
         session_destroy();
-        die(header("location:home.php?closeAccount=true"));
+        die(header("location:home.php?loginFailed=true"));
     }
 ?>
