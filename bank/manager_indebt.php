@@ -58,10 +58,11 @@
                             <div class="dropdown">
                                 <button onclick="dropdown_func(<?php echo $i ?>)" class="dropbtn"></button>
                                 <div id="dropdown<?php echo $i ?>" class="dropdown-content">
-                                    <!--Pass the customer trans_id as a get variable in the link-->
-                                    <a href="./send_funds.php?cust_id=<?php echo $row1["cust_id"] ?>">Gửi</a>
-                                    <a href="./delete_beneficiary.php?cust_id=<?php echo $row1["cust_id"] ?>"
-                                        onclick="return confirm('Bạn chắc chứ?')">Xóa</a>
+                                    <?php if($row["owner"] == 1) {?>
+                                        <a href="./delete_indebt.php?indebt_id=<?php echo $row["indebt_id"] ?>&my_id=<?php echo $id ?>&acc_id=<?php echo $row["acc_id"] ?> " onclick="return confirm('Bạn chắc chứ?')">Hủy nhắc nợ</a>
+                                    <?php } else if($row["owner"] == 0) {?>
+                                        <a href="./pay_indebt.php?indebt_id=<?php echo $row["indebt_id"] ?>&my_id=<?php echo $id ?>&acc_id=<?php echo $row["acc_id"] ?> " >Thanh toán</a>
+                                    <?php } ?>
                                 </div>
                             </div>
                         </div>
@@ -69,7 +70,7 @@
             <?php }}
 
             if ($i == 0) { ?>
-                <p id="none">Không tìm thấy người thụ hưởng</p>
+                <p id="none">Không có nhắc nợ.</p>
             <?php }
             $conn->close(); ?>
     </div>
