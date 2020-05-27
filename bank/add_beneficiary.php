@@ -15,36 +15,10 @@
 
 <body>
     <form class="add_customer_form" action="./add_beneficiary_action.php" method="post">
-        <div class="flex-container-form_header">
-            <h1 id="form_header">Vui lòng điền chi tiết thụ hưởng</h1>
-        </div>
-
-        <div class="flex-container">
-            <div class=container>
-                <label>Họ: </label><br>
-                <input name="fname" size="30" type="text" required />
-            </div>
-            <div  class=container>
-                <label>Tên: </b></label><br>
-                <input name="lname" size="30" type="text" required />
-            </div>
-        </div>
-
         <div class="flex-container">
             <div class=container>
                 <label>Số tài khoản: </label><br>
                 <input name="acno" size="25" type="text" required />
-            </div>
-        </div>
-
-        <div class="flex-container">
-            <div class=container>
-                <label>Email: </label><br>
-                <input name="email" size="30" type="text" required />
-            </div>
-            <div  class=container>
-                <label>Số điện thoại: </b></label><br>
-                <input name="phno" size="30" type="text" required />
             </div>
         </div>
 

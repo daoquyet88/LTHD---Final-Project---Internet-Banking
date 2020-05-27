@@ -5,24 +5,18 @@
     include "customer_sidebar.php";
     include "session_timeout.php";
 
-    $fname = mysqli_real_escape_string($conn, $_POST["fname"]);
-    $lname = mysqli_real_escape_string($conn, $_POST["lname"]);
     $acno = mysqli_real_escape_string($conn, $_POST["acno"]);
-    $email = mysqli_real_escape_string($conn, $_POST["email"]);
-    $phno = mysqli_real_escape_string($conn, $_POST["phno"]);
 
     $id = $_SESSION['loggedIn_cust_id'];
-    $sql0 = "SELECT cust_id FROM customer WHERE first_name='".$fname."' AND
-                                                last_name='".$lname."' AND
-                                                account_no='".$acno."' AND
-                                                email='".$email."' AND
-                                                phone_no='".$phno."'";
+    $sql0 = "SELECT cust_id, email, phone_no FROM customer WHERE account_no='".$acno."'";
     $result = $conn->query($sql0);
 
     $success = 0;
     if ($result->num_rows > 0) {
         $row = $result->fetch_assoc();
         $beneficiary_id = $row["cust_id"];
+        $email = $row["email"]; 
+        $phno = $row["phone_no"];
 
         if ($id != $beneficiary_id) {
             $sql1 = "INSERT INTO beneficiary".$id." VALUES(
