@@ -346,13 +346,13 @@ INSERT INTO `passbook4` (`trans_id`, `trans_date`, `remarks`, `debit`, `credit`,
 
 CREATE TABLE `staff` (
   `cust_id` int(11) NOT NULL,
-  `first_name` varchar(30) CHARACTER SET utf8 DEFAULT NULL,
-  `last_name` varchar(30) CHARACTER SET utf8 DEFAULT NULL,
-  `gender` varchar(10) CHARACTER SET utf8 DEFAULT NULL,
+  `first_name` nvarchar(30) DEFAULT NULL,
+  `last_name` nvarchar(30) DEFAULT NULL,
+  `gender` nvarchar(10) DEFAULT NULL,
   `dob` date DEFAULT NULL,
   `email` varchar(30) DEFAULT NULL,
   `phone_no` varchar(20) DEFAULT NULL,
-  `address` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
+  `address` nvarchar(255) DEFAULT NULL,
   `uname` varchar(30) DEFAULT NULL,
   `pwd` varchar(30) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -362,12 +362,92 @@ CREATE TABLE `staff` (
 --
 
 INSERT INTO `staff` (`cust_id`, `first_name`, `last_name`, `gender`, `dob`, `email`, `phone_no`, `address`, `uname`, `pwd`) VALUES
-(1, 'Nguyễn', 'Ngọc', 'Nam', '1993-10-01', 'ngoc@lqv.com', '+84 918722499', 'HCM', 'nv1', '123'),
-(2, 'Quách', 'Tĩnh', 'Nam', '1994-10-11', 'tinh@lqv.com', '+84 954321679', 'HCM', 'nv2', '123');
+(1, N'Nguyễn', N'Ngọc', N'Nam', '1993-10-01', 'ngoc@lqv.com', '+84 918722499', N'HCM', 'nv1', '123'),
+(2, N'Quách', N'Tĩnh', N'Nam', '1994-10-11', 'tinh@lqv.com', '+84 954321679', N'HCM', 'nv2', '123');
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `indebt1`
+--
+
+CREATE TABLE `indebt1` (
+  `indebt_id` int(11) NOT NULL,
+  `owner` int(1) DEFAULT NULL,
+  `account_no` int(11) DEFAULT NULL,
+  `comment` nvarchar(300) DEFAULT NULL,
+  `balance` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `indebt2`
+--
+
+CREATE TABLE `indebt2` (
+  `indebt_id` int(11) NOT NULL,
+  `owner` int(1) DEFAULT NULL,
+  `account_no` int(11) DEFAULT NULL,
+  `comment` nvarchar(300) DEFAULT NULL,
+  `balance` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `indebt3`
+--
+
+CREATE TABLE `indebt3` (
+  `indebt_id` int(11) NOT NULL,
+  `owner` int(1) DEFAULT NULL,
+  `account_no` int(11) DEFAULT NULL,
+  `comment` nvarchar(300) DEFAULT NULL,
+  `balance` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `indebt4`
+--
+
+CREATE TABLE `indebt4` (
+  `indebt_id` int(11) NOT NULL,
+  `owner` int(1) DEFAULT NULL,
+  `account_no` int(11) DEFAULT NULL,
+  `comment` nvarchar(300) DEFAULT NULL,
+  `balance` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Chỉ mục cho các bảng đã đổ
 --
+
+--
+-- Chỉ mục cho bảng `indebt1`
+--
+ALTER TABLE `indebt1`
+  ADD PRIMARY KEY (`indebt_id`);
+
+--
+-- Chỉ mục cho bảng `indebt2`
+--
+ALTER TABLE `indebt2`
+  ADD PRIMARY KEY (`indebt_id`);
+
+--
+-- Chỉ mục cho bảng `indebt3`
+--
+ALTER TABLE `indebt3`
+  ADD PRIMARY KEY (`indebt_id`);
+
+--
+-- Chỉ mục cho bảng `indebt4`
+--
+ALTER TABLE `indebt4`
+  ADD PRIMARY KEY (`indebt_id`);
 
 --
 -- Chỉ mục cho bảng `staff`

@@ -14,6 +14,8 @@
         <a id="label">Gửi/Nhận</a>
         <a href="./beneficiary.php">Chuyển tiền</a>
         <a href="./atm_simulator.php">ATM trực tuyến</a>
+        <a id="label">Nhắc nợ</a>
+        <a href="./manager_indebt.php">Quản lý nhắc nợ</a>
     </div>
 
 <script>
