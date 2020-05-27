@@ -34,11 +34,11 @@
         <div class="flex-item">
             <?php
                 if (($conn->query($sql0) === TRUE)) { ?>
-                    <p id="info"><?php echo "Customer Deleted Successfully !"; ?></p>
+                    <p id="info"><?php echo "Xóa khách hàng thành công!"; ?></p>
                 <?php
                 }
                 else { ?>
-                    <p id="info"><?php echo "Error: " . $sql0 . "<br>" . $conn->error . "<br>"; ?></p>
+                    <p id="info"><?php echo "Lỗi: " . $sql0 . "<br>" . $conn->error . "<br>"; ?></p>
                 <?php
                 }
             ?>
@@ -47,11 +47,11 @@
         <div class="flex-item">
             <?php
                 if (($conn->query($sql1) === TRUE)) { ?>
-                    <p id="info"><?php echo "Customer's Passbook Deleted Successfully !"; ?></p>
+                    <p id="info"><?php echo "Xóa lịch sử giao dịch khách hàng thành công!"; ?></p>
                 <?php
                 }
                 else { ?>
-                    <p id="info"><?php echo "Error: " . $sql1 . "<br>" . $conn->error . "<br>"; ?></p>
+                    <p id="info"><?php echo "Lỗi: " . $sql1 . "<br>" . $conn->error . "<br>"; ?></p>
                 <?php
                 }
             ?>
@@ -60,11 +60,11 @@
         <div class="flex-item">
             <?php
                 if (($conn->query($sql2) === TRUE)) { ?>
-                    <p id="info"><?php echo "Customer's Beneficiary Deleted Successfully !"; ?></p>
+                    <p id="info"><?php echo "Xóa người thụ hưởng khách hàng thành công!"; ?></p>
                 <?php
                 }
                 else { ?>
-                    <p id="info"><?php echo "Error: " . $sql2 . "<br>" . $conn->error . "<br>"; ?></p>
+                    <p id="info"><?php echo "Lỗi: " . $sql2 . "<br>" . $conn->error . "<br>"; ?></p>
                 <?php
                 }
             ?>

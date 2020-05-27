@@ -48,11 +48,11 @@
         <div class="flex-item">
                 <?php
                     if ($success = 1) { ?>
-                        <p id="info"><?php echo "Beneficiary Deleted Successfully !"; ?></p>
+                        <p id="info"><?php echo "Xóa người thụ hưởng thành công!"; ?></p>
                     <?php
                     }
                     else { ?>
-                        <p id="info"><?php echo "Error: " . $conn->error . "<br>"; ?></p>
+                        <p id="info"><?php echo "Lỗi: " . $conn->error . "<br>"; ?></p>
                     <?php
                     }
                 ?>

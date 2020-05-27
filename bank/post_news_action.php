@@ -30,13 +30,12 @@
 
             <?php
             if (($conn->query($sql0) === TRUE) && ($conn->query($sql1) === TRUE)) { ?>
-                <p id="info"><?php echo "News posted successfully !\n"; ?></p>
+                <p id="info"><?php echo "Đăng tin tức thành công!\n"; ?></p>
             <?php
             } else { ?>
                 <p id="info"><?php
-                echo "Server Error !<br>";
-                echo "Error: " . $sql0 . "<br>" . $conn->error . "<br>";
-                echo "Error: " . $sql1 . "<br>" . $conn->error . "<br>"; ?></p>
+                echo "Lỗi hệ thống!<br>";
+                echo "Lỗi: " . $sql1 . "<br>" . $conn->error . "<br>"; ?></p>
             <?php
             }
 
