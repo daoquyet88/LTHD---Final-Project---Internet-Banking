@@ -42,7 +42,7 @@
 
                 <form class="search_form" action="" method="post">
                     <div class="flex-item-search">
-                        <input name="search" size="30" type="text" placeholder="Search Customers..." />
+                        <input name="search" size="30" type="text" placeholder="Tìm khách hàng" />
                     </div>
 
                     <div class="flex-item-search-button">
@@ -92,6 +92,7 @@
                           <div id="dropdown<?php echo $i ?>" class="dropdown-content">
                             <!--Pass the customer trans_id as a get variable in the link-->
                             <a href="./edit_customer.php?cust_id=<?php echo $row["cust_id"] ?>">Xem / Sửa</a>
+                            <a href="./deposit_account.php?cust_id=<?php echo $row["cust_id"] ?>">Nạp tiền</a>
                             <a href="./transactions.php?cust_id=<?php echo $row["cust_id"] ?>">Giao dịch</a>
                             <a href="./delete_customer.php?cust_id=<?php echo $row["cust_id"] ?>"
                                  onclick="return confirm('Bạn chắc chứ?')">Xóa</a>

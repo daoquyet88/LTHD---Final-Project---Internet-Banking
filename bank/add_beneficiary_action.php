@@ -54,7 +54,7 @@
 
             <?php
             if ($success == 0) { ?>
-                <p id="info"><?php echo "Dữ liệu không hợp lệ / Lỗi kết nối!\n"; ?></p>
+                <p id="info"><?php echo "Không tìm thấy người thụ hưởng!\n"; ?></p>
             <?php } ?>
 
             <?php
@@ -64,7 +64,7 @@
         </div>
 
         <div class="flex-item">
-            <a href="./beneficiary.php" class="button">Trở về</a>
+            <a href="./add_beneficiary.php" class="button">Trở về</a>
         </div>
     </div>
 
