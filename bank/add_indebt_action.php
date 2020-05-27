@@ -1,40 +1,29 @@
 <?php
     include "validate_customer.php";
     include "header.php";
+    include "connect.php";
     include "customer_navbar.php";
     include "customer_sidebar.php";
     include "session_timeout.php";
 
-    $acno = mysqli_real_escape_string($conn, $_POST["acno"]);
+    $owner = mysqli_real_escape_string($conn, $_POST["owner"]);
+    $account_no = mysqli_real_escape_string($conn, $_POST["account_no"]);
+    $comment = mysqli_real_escape_string($conn, $_POST["comment"]);
+    $balance = mysqli_real_escape_string($conn, $_POST["balance"]);
 
     $id = $_SESSION['loggedIn_cust_id'];
-    $sql0 = "SELECT cust_id FROM customer WHERE account_no='".$acno."'";
-    $result = $conn->query($sql0);
 
     $success = 0;
-    if ($result->num_rows > 0) {
-        $row = $result->fetch_assoc();
-        $indebt_id = $row["cust_id"];
-        $comment = $row["comment"]; 
-        $balance = $row["balance"];
-
-        if ($id != $indebt_id) {
-            $sql1 = "INSERT INTO indebt".$id." VALUES(
-                        NULL,
-                        '$indebt_id',
-                        '$acno',
-                        '$comment',
-                        '$balance'
-                        
-                    )";
-
-            if (($conn->query($sql1) === TRUE)) {
-                $success = 1;
-            }
-        }
-        else {
-            $success = -1;
-        }
+    $sql1 = "INSERT INTO indebt".$id." VALUES(
+        NULL,
+        $owner,
+        $account_no,
+        $comment,
+        $balance
+    )";
+    echo $sql1;
+    if (($conn->query($sql1) === TRUE)) {
+        $success = 1;
     }
 ?>
 
@@ -50,22 +39,17 @@
         <div class="flex-item">
             <?php
             if ($success == 1) { ?>
-                <p id="info"><?php echo "thêm thành công!\n"; ?></p>
+                <p id="info"><?php echo "Tạo nhắc nợ thành công!\n"; ?></p>
             <?php } ?>
 
             <?php
             if ($success == 0) { ?>
-                <p id="info"><?php echo "Không tìm thấy !\n"; ?></p>
-            <?php } ?>
-
-            <?php
-            if ($success == -1) { ?>
-                <p id="info"><?php echo "Không thể tự thêm mình !\n"; ?></p>
+                <p id="info"><?php echo "Xảy ra lỗi vui lòng thử lại!\n"; ?></p>
             <?php } ?>
         </div>
 
         <div class="flex-item">
-            <a href="./add_indebt.php" class="button">Trở về</a>
+            <a href="./manager_indebt.php" class="button">Trở về</a>
         </div>
     </div>
 

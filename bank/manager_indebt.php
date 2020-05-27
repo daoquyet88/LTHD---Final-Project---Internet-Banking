@@ -55,20 +55,21 @@
                         </div>
 
                         <div class="flex-item-1">
-                            
-                               
+                            <div class="dropdown">
+                                <button onclick="dropdown_func(<?php echo $i ?>)" class="dropbtn"></button>
+                                <div id="dropdown<?php echo $i ?>" class="dropdown-content">
                                     <!--Pass the customer trans_id as a get variable in the link-->
                                     <a href="./send_funds.php?cust_id=<?php echo $row1["cust_id"] ?>">Gửi</a>
-                                    <a href="./delete_indebt.php?cust_id=<?php echo $row1["cust_id"] ?>"
+                                    <a href="./delete_beneficiary.php?cust_id=<?php echo $row1["cust_id"] ?>"
                                         onclick="return confirm('Bạn chắc chứ?')">Xóa</a>
-                                
+                                </div>
                             </div>
                         </div>
                     </div>
             <?php }}
 
             if ($i == 0) { ?>
-                <p id="none">Không tìm thấy </p>
+                <p id="none">Không tìm thấy người thụ hưởng</p>
             <?php }
             $conn->close(); ?>
     </div>
@@ -106,6 +107,6 @@
         }
       }
     }
-
+    </script>
 </body>
 </html>
