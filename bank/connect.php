@@ -2,13 +2,13 @@
 <?php
 
 
-$servername = "localhost";
+$servername = "118.69.190.29";
 $database = "net_banking";
 
 
 
-$username = "root";
-$password = "";
+$username = "opensips";
+$password = "opensipsrw";
 // Create connection
 $conn = mysqli_connect($servername, $username, $password, $database);
 mysqli_set_charset($conn, 'UTF8');
