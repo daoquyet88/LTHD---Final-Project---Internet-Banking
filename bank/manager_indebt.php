@@ -59,9 +59,9 @@
                                 <button onclick="dropdown_func(<?php echo $i ?>)" class="dropbtn"></button>
                                 <div id="dropdown<?php echo $i ?>" class="dropdown-content">
                                     <?php if($row["creditor"] == $account_no) {?>
-                                        <a href="./delete_indebt.php ?> " onclick="return confirm('Bạn chắc chứ?')">Hủy nhắc nợ</a>
+                                        <a href="./delete_indebt.php?indebt_id=<?php echo $row["indebt_id"] ?> " onclick="return confirm('Bạn chắc chứ?')">Hủy nhắc nợ</a>
                                     <?php } else if($row["debtor"] == $account_no) {?>
-                                        <a href="./pay_indebt.php ?> " >Thanh toán</a>
+                                        <a href="./pay_indebt.php?indebt_id=<?php echo $row["indebt_id"] ?>&creditor=<?php echo $row["creditor"] ?>&balance=<?php echo $row["balance"] ?> " >Thanh toán</a>
                                     <?php } ?>
                                 </div>
                             </div>

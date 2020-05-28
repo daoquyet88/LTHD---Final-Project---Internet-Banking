@@ -9,12 +9,11 @@
     $success = 0;
 
     $indebt_id = $_GET['indebt_id'];
-    $my_id = $_GET['my_id'];
-    $acc_id = $_GET['acc_id'];
 
-    echo $indebt_id;
-    echo $my_id;
-    echo $acc_id;
+    $sql = "DELETE FROM indebt WHERE indebt_id='".$indebt_id."'";
+    if (($conn->query($sql) === TRUE)) {
+        $success = 1;
+    }
 ?>
 
 <!DOCTYPE html>
