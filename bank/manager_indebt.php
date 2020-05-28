@@ -8,9 +8,10 @@
 
     if (isset($_SESSION['loggedIn_cust_id'])) {
         $id = $_SESSION['loggedIn_cust_id'];
+        $account_no = $_SESSION['loggedIn_account_no'];
     }
 
-    $sql = "SELECT * FROM indebt".$id;
+    $sql = "SELECT * FROM indebt WHERE creditor='".$account_no."' OR debtor='".$account_no."'";
 ?>
 
 <!DOCTYPE html>
@@ -33,10 +34,9 @@
         <p id="info">Tạo, thanh toán và hủy nhắc nợ.</p>
         <?php
             $result = $conn->query($sql);
-
+            $i = 0;
             if ($result->num_rows > 0) {
             // output data of each row
-            $i = 0;
             while($row = $result->fetch_assoc()) {
                 $i++;
                 ?>
@@ -46,10 +46,10 @@
                         </div>
 
                         <div class="flex-item-2">
-                            <?php if($row["owner"] == 1) {?>
-                                <p id="name"><?php echo "Tài khoản: " .$row["account_no"]. " nợ bạn."; ?></p>
-                            <?php } else if($row["owner"] == 0) {?>
-                                <p id="name"><?php echo "Bạn nợ tài khoản: " .$row["account_no"]. "."; ?></p>
+                            <?php if($row["creditor"] == $account_no) {?>
+                                <p id="name"><?php echo "Tài khoản: " .$row["debtor"]. " nợ bạn."; ?></p>
+                            <?php } else if($row["debtor"] == $account_no) {?>
+                                <p id="name"><?php echo "Bạn nợ tài khoản: " .$row["creditor"]. "."; ?></p>
                             <?php } ?>
                             <p id="acno"><?php echo "Số tiền: " .number_format($row["balance"]). "VND"; ?></p>
                         </div>
@@ -58,10 +58,10 @@
                             <div class="dropdown">
                                 <button onclick="dropdown_func(<?php echo $i ?>)" class="dropbtn"></button>
                                 <div id="dropdown<?php echo $i ?>" class="dropdown-content">
-                                    <?php if($row["owner"] == 1) {?>
-                                        <a href="./delete_indebt.php?indebt_id=<?php echo $row["indebt_id"] ?>&my_id=<?php echo $id ?>&acc_id=<?php echo $row["acc_id"] ?> " onclick="return confirm('Bạn chắc chứ?')">Hủy nhắc nợ</a>
-                                    <?php } else if($row["owner"] == 0) {?>
-                                        <a href="./pay_indebt.php?indebt_id=<?php echo $row["indebt_id"] ?>&my_id=<?php echo $id ?>&acc_id=<?php echo $row["acc_id"] ?> " >Thanh toán</a>
+                                    <?php if($row["creditor"] == $account_no) {?>
+                                        <a href="./delete_indebt.php ?> " onclick="return confirm('Bạn chắc chứ?')">Hủy nhắc nợ</a>
+                                    <?php } else if($row["debtor"] == $account_no) {?>
+                                        <a href="./pay_indebt.php ?> " >Thanh toán</a>
                                     <?php } ?>
                                 </div>
                             </div>

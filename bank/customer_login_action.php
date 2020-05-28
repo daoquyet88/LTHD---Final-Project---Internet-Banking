@@ -25,6 +25,7 @@
         if ($option == "kh") {
             if ($row["acc_status"] == "1") {
                 $_SESSION['loggedIn_cust_id'] = $row["cust_id"];
+                $_SESSION['loggedIn_account_no'] = $row["account_no"];
                 $_SESSION['isCustValid'] = true;
                 $_SESSION['LAST_ACTIVITY'] = time();
                 header("location:customer_home.php");
