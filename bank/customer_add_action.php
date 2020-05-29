@@ -101,22 +101,17 @@ $sql4 = "INSERT INTO passbook".$id." VALUES(
                         <p id="info"><?php echo "Thêm khách hàng thành công!\n"; ?></p>
                     <?php } ?>
                 <?php } ?>
-            <?php } ?>
         </div>
-            <?php
-            } else { ?>
-        <div class="flex-item">
-                <p id="info"><?php
-                echo "Error: " . $sql3 . "<br>" . $conn->error . "<br>"; ?></p>
+            <?php } else { ?>
+                <div class="flex-item">
+                    <p id="info"><?php echo "Error: " . $sql3 . "<br>" . $conn->error . "<br>"; ?></p>
             <?php } ?>
-        </div>
+                </div>
         <?php $conn->close(); ?>
 
         <div class="flex-item">
             <a href="./customer_add.php" class="button">Thêm lại</a>
         </div>
-
     </div>
-
 </body>
 </html>
