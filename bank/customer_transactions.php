@@ -32,24 +32,24 @@
     }
 
     // Filter indicator variable
-    $filter_indicator = "None";
+    $filter_indicator = "Không có";
 
     // Queries when search is set
     if (!empty($_SESSION['search_term'])) {
         $sql0 .= " WHERE remarks COLLATE latin1_GENERAL_CI LIKE '%".$_SESSION['search_term']."%'";
-        $filter_indicator = "Remarks";
+        $filter_indicator = "Ghi chú";
 
         if (!empty($_SESSION['date_from']) && empty($_SESSION['date_to'])) {
             $sql0 .= " AND trans_date > '".$_SESSION['date_from']." 00:00:00'";
-            $filter_indicator = "Remarks & Date From";
+            $filter_indicator = "Ghi chú và từ ngày";
         }
         if (empty($_SESSION['date_from']) && !empty($_SESSION['date_to'])) {
             $sql0 .= " AND trans_date < '".$_SESSION['date_to']." 23:59:59'";
-            $filter_indicator = "Remarks & Date To";
+            $filter_indicator = "Ghi chú và đến ngày";
         }
         if (!empty($_SESSION['date_from']) && !empty($_SESSION['date_to'])) {
             $sql0 .=  " AND trans_date BETWEEN '".$_SESSION['date_from']." 00:00:00' AND '".$_SESSION['date_to']." 23:59:59'";
-            $filter_indicator = "Remarks, Date From & Date To";
+            $filter_indicator = "Ghi chú, từ ngày và đến ngày";
         }
     }
 
@@ -57,15 +57,15 @@
     if (empty($_SESSION['search_term'])) {
         if (!empty($_SESSION['date_from']) && empty($_SESSION['date_to'])) {
             $sql0 .= " WHERE trans_date > '".$_SESSION['date_from']." 00:00:00'";
-            $filter_indicator = "Date From";
+            $filter_indicator = "Từ ngày";
         }
         if (empty($_SESSION['date_from']) && !empty($_SESSION['date_to'])) {
             $sql0 .= " WHERE trans_date < '".$_SESSION['date_to']." 23:59:59'";
-            $filter_indicator = "Date To";
+            $filter_indicator = "Đến ngày";
         }
         if (!empty($_SESSION['date_from']) && !empty($_SESSION['date_to'])) {
             $sql0 .=  " WHERE trans_date BETWEEN '".$_SESSION['date_from']." 00:00:00' AND '".$_SESSION['date_to']." 23:59:59'";
-            $filter_indicator = "Date From & Date To";
+            $filter_indicator = "Từ ngày và đến ngày";
         }
     }
 
@@ -83,6 +83,19 @@
         }
         if ($sort == 'date_up') {
             $sql0 .= " ORDER BY trans_date DESC";
+        }
+    }
+
+    // Sort all or 30 days
+    if (isset($_POST['filter'])) {
+        $filter = $_POST['filter'];
+        if ($filter == 0) {
+            $sql0 .= " WHERE DATEDIFF(CURRENT_TIMESTAMP,trans_date) < 30";
+            $filter_indicator = "30 ngày gần nhất";
+        }
+        if ($filter == 1) {
+            $sql0 .= "";
+            $filter_indicator = "Tất cả giao dịch";
         }
     }
 ?>
@@ -147,6 +160,19 @@
                         <input id="date" type="text" placeholder="Đến ngày" name="date_to">
                     </div>
                 </div>
+
+                <label>Lọc ngày: </label>
+                <div class="duration-container">
+                    <div class="container">
+                        <input type="radio" name="filter" value="1" id="debit-radio" checked>
+                        <label id="radio-label" for="debit-radio"><span class="radio">Tất cả giao dịch</span></label>
+                    </div>
+                    <div class="container">
+                        <input type="radio" name="filter" value="0" id="credit-radio">
+                        <label id="radio-label" for="credit-radio"><span class="radio">30 ngày gần nhất</span></label>
+                    </div>
+                </div>
+
                 <button id="submit" type="submit">Đồng ý</button>
             </div>
         </form>
@@ -171,21 +197,22 @@
                     </tr>
         <?php
             // output data of each row
-            while($row = $result->fetch_assoc()) {?>
-                    <tr>
-                        <td><?php echo $row["trans_id"]; ?></td>
-                        <td>
-                            <?php
-                                $time = strtotime($row["trans_date"]);
-                                $sanitized_time = date("d/m/Y, H:i", $time);
-                                echo $sanitized_time;
-                             ?>
-                        </td>
-                        <td><?php echo $row["remarks"]; ?></td>
-                        <td><?php echo number_format($row["debit"]); ?></td>
-                        <td><?php echo number_format($row["credit"]); ?></td>
-                        <td><?php echo number_format($row["balance"]); ?></td>
-                    </tr>
+            $id = 0;
+            while($row = $result->fetch_assoc()) { $id++; ?>
+                <tr>
+                    <td><?php echo $id; ?></td>
+                    <td>
+                        <?php
+                            $time = strtotime($row["trans_date"]);
+                            $sanitized_time = date("d/m/Y, H:i", $time);
+                            echo $sanitized_time;
+                            ?>
+                    </td>
+                    <td><?php echo $row["remarks"]; ?></td>
+                    <td><?php echo number_format($row["debit"]); ?></td>
+                    <td><?php echo number_format($row["credit"]); ?></td>
+                    <td><?php echo number_format($row["balance"]); ?></td>
+                </tr>
             <?php } ?>
             </table>
             <?php
