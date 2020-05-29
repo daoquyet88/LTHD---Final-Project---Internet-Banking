@@ -46,7 +46,7 @@ $conn->query($sql5);
 $sql1 = "CREATE TABLE passbook".$id."(
             trans_id INT NOT NULL AUTO_INCREMENT,
             trans_date DATETIME,
-            remarks VARCHAR(255),
+            remarks NVARCHAR(255),
             debit INT,
             credit INT,
             balance INT,
@@ -96,7 +96,12 @@ $sql4 = "INSERT INTO passbook".$id." VALUES(
         <div class="flex-item">
             <?php
             if (($conn->query($sql3) === TRUE)) { ?>
-                <p id="info"><?php echo "Thêm khách hàng thành công!\n"; ?></p>
+                <?php if (($conn->query($sql1) === TRUE) && ($conn->query($sql2) === TRUE)) { ?>
+                    <?php if (($conn->query($sql4) === TRUE)) { ?>
+                        <p id="info"><?php echo "Thêm khách hàng thành công!\n"; ?></p>
+                    <?php } ?>
+                <?php } ?>
+            <?php } ?>
         </div>
             <?php
             } else { ?>
