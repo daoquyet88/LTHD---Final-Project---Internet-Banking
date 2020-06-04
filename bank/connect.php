@@ -1,14 +1,23 @@
 
 <?php
 
+// Localhost
+$localServerName = "localhost";
+$localUsername = "root";
+$localPassword = "";
+// Workbench
+$workbenchServerName = "118.69.190.29";
+$workbenchUsername = "opensips";
+$workbenchPassword = "opensipsrw";
+//------------------------------------------------------------------
 
-$servername = "118.69.190.29";
+$servername = $localServerName;
 $database = "net_banking";
 
 
 
-$username = "opensips";
-$password = "opensipsrw";
+$username = $localUsername;
+$password = $localPassword;
 // Create connection
 $conn = mysqli_connect($servername, $username, $password, $database);
 mysqli_set_charset($conn, 'UTF8');
