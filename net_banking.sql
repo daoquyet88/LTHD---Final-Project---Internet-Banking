@@ -111,8 +111,8 @@ CREATE TABLE `customer` (
 --
 
 INSERT INTO `customer` (`cust_id`, `first_name`, `last_name`, `gender`, `dob`, `aadhar_no`, `email`, `phone_no`, `address`, `branch`, `account_no`, `pin`, `uname`, `pwd`, `acc_status`) VALUES
-(1, 'Nguyễn', 'Thế Lợi', 'Nam', '1999-12-12', 11111111, 'ngtheloi.2710@gmail.com', '0964024624', 'HCM', 'newyork', 18424038, 1234, 'loi', '123', 1),
-(2, 'Phan', 'Văn Quân', 'Nam', '1999-12-12', 22222222, 'phanvanquanit@gmail.com', '00000000', 'HCM', 'newyork', 18424053, 1234, 'quan', '1234', 1),
+(1, 'Nguyễn Thế', 'Lợi', 'Nam', '1999-12-12', 11111111, 'ngtheloi.2710@gmail.com', '0964024624', 'HCM', 'newyork', 18424038, 1234, 'loi', '123', 1),
+(2, 'Phan Văn', 'Quân', 'Nam', '1999-12-12', 22222222, 'phanvanquanit@gmail.com', '00000000', 'HCM', 'newyork', 18424053, 1234, 'quan', '123', 1),
 (3, 'Đặng Ngọc', 'Vũ', 'Nam', '1999-12-12', 33333333, 'tusharpkt@gmail.com', '00000130', 'HCM', 'paris', 18424082, 1234, 'vu', '123', 1);
 
 -- --------------------------------------------------------
@@ -276,8 +276,8 @@ CREATE TABLE `staff` (
 --
 
 INSERT INTO `staff` (`cust_id`, `first_name`, `last_name`, `gender`, `dob`, `email`, `phone_no`, `address`, `uname`, `pwd`) VALUES
-(1, 'Nguyễn', 'Ngọc', 'Nam', '1993-10-01', 'ngoc@lqv.com', '+84 918722499', 'HCM', 'nv1', '123'),
-(2, 'Quách', 'Tĩnh', 'Nam', '1994-10-11', 'tinh@lqv.com', '+84 954321679', 'HCM', 'nv2', '123');
+(1, 'Nguyễn', 'Ngọc', 'Nam', '1993-10-01', 'ngoc@lqv.com', '0123456789', 'HCM', 'nv1', '123'),
+(2, 'Quách', 'Tĩnh', 'Nam', '1994-10-11', 'tinh@lqv.com', '0123356789', 'HCM', 'nv2', '123');
 
 --
 -- Chỉ mục cho các bảng đã đổ
