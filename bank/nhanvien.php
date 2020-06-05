@@ -42,6 +42,15 @@
                 <button type="button" class="cancelbtn" onclick="location.href='./home.php'">Quay về trang chủ</button>
             </div>
         </div>
+        <div class="flex-container-2">
+            <div class="flex-item">
+                <button type="submit">Đăng nhập</button>
+            </div>
+
+            <div class="flex-item">
+                <button type="button" class="cancelbtn" onclick="location.href='./home.php'">Quay về trang chủ</button>
+            </div>
+        </div>
     </form>
 </body>
 </html>
