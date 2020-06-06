@@ -97,6 +97,14 @@
                 &emsp;Thời gian: <?php echo $sanitized_time; ?><br>
                 &emsp;<?php echo $row1["remarks"]; ?>.
             </p>
+            <p id="customer">
+                &#9656 Số dư (VND): <?php echo number_format($row1["balance"]); ?><br>
+                &#9656 Bạn có <?php echo $row2["COUNT(*)"]; ?> thụ hưởng.<br>
+                &#9656 Giao dịch cuối cùng của bạn:<br>
+                &emsp;<?php echo $type; ?>: <?php echo number_format($transaction); ?> VND<br>
+                &emsp;Thời gian: <?php echo $sanitized_time; ?><br>
+                &emsp;<?php echo $row1["remarks"]; ?>.
+            </p><?php
         </div>
     </div>
 </body>
