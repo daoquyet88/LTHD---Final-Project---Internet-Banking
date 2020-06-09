@@ -127,6 +127,10 @@
                 Xin chào, <?php echo $row0["first_name"] ?>&nbsp<?php echo $row0["last_name"] ?>!
                 <br>Số tài khoản: <?php echo $row0["account_no"]; ?>
             </h1>
+            <h1 id="customer">
+                Xin chào, <?php echo $row0["first_name"] ?>&nbsp<?php echo $row0["last_name"] ?>!
+                <br>Số tài khoản: <?php echo $row0["account_no"]; ?>
+            </h1>
             <p id="customer">
                 &#9656 Số dư (VND): <?php echo number_format($row1["balance"]); ?><br>
                 &#9656 Bạn có <?php echo $row2["COUNT(*)"]; ?> thụ hưởng.<br>
